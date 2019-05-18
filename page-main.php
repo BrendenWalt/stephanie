@@ -11,19 +11,23 @@ get_header();
 
 			<!-- Home -->
 			<section>
-				<h1>Stephanie<br>VanAlstine</h1>
-				<h3>Acts and sings real good</h3>
+				<div class="container">
+					<h1>Stephanie<br>VanAlstine</h1>
+					<h3>Acts and sings real good</h3>
+				</div>
 			</section><!-- HOME END -->
 
 			<!-- Gallery -->
 			<section>
-				<div class="gallery">
+				<div class="container">
+					<div class="gallery">
+					</div>
 				</div>
 			</section><!-- GALLERY END -->
 
 			<!-- About -->
 			<section>
-				<div>
+				<div class="container">
 					<h1>About Me</h1>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia doloribus, reprehenderit, eveniet voluptatum eaque necessitatibus illum nihil placeat rerum voluptates consequatur qui ratione. Ad voluptates deleniti voluptate pariatur, error hic nihil nesciunt esse doloremque, sequi in alias quod?</p>
 					<button>Contact Me</button>
@@ -32,19 +36,22 @@ get_header();
 
 			<!-- Resume -->
 			<section>
-				<h1>Resume</h1>
-				<!-- Experience -->
-				<div class="resume-container">
-					<h3>Experience</h3>
+				<div class="container">
+					<h1>Resume</h1>
+					<!-- Experience -->
+					<div class="resume-container">
+						<h3>Experience</h3>
+					</div>
+					<!-- Special Skills -->
+					<div class="resume-container">
+						<h3>Special Skills</h3>
+					</div>
+					<!-- Education -->
+					<div class="resume-container">
+						<h3>Education</h3>
+					</div>
 				</div>
-				<!-- Special Skills -->
-				<div class="resume-container">
-					<h3>Special Skills</h3>
-				</div>
-				<!-- Education -->
-				<div class="resume-container">
-					<h3>Education</h3>
-				</div>
+				
 				<!-- Banner -->
 				<div class="resume-banner">
 					<h3>Download Full Resume</h3>
@@ -54,16 +61,21 @@ get_header();
 
 			<!-- Videos -->
 			<section>
-
+				<div class="container"></div>
 			</section><!-- VIDEOS END -->
 
 			<!-- Upcoming -->
 			<section>
-				<h1>Upcoming Appearances</h1>
+				<div class="container">
+					<h1>Upcoming Appearances</h1>
+				</div>
 			</section><!--UPCOMING END -->
 
 			<!-- Instagram Feed -->
 			<section>
+				<div class="container">
+				
+				</div>
 			</section><!-- INSTAGRAM END -->
 
 			<!-- Contact -->
@@ -85,5 +97,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
