@@ -10,10 +10,18 @@ get_header();
 		<main id="main" class="site-main">
 
 			<!-- Home -->
-			<section>
-				<div class="container">
-					<h1>Stephanie<br>VanAlstine</h1>
-					<h3>Acts and sings real good</h3>
+			<section class="hero is-fullheight">
+				<div class="hero-body">
+					<div class="container">
+						<div>
+							<img src="https://placekitten.com/960/1080" alt="">
+						</div>
+						<div>
+							<h1>Stephanie<br>VanAlstine</h1>
+							<h3>Acts and sings real good</h3>
+						</div>
+						
+					</div>
 				</div>
 			</section><!-- HOME END -->
 
@@ -21,6 +29,13 @@ get_header();
 			<section>
 				<div class="container">
 					<div class="gallery">
+						<img src="https://placekitten.com/600/600" alt="">
+						<img src="https://placekitten.com/600/600" alt="">
+						<img src="https://placekitten.com/600/600" alt="">
+						<img src="https://placekitten.com/600/600" alt="">
+						<img src="https://placekitten.com/600/600" alt="">
+						<img src="https://placekitten.com/600/600" alt="">
+						<img src="https://placekitten.com/600/600" alt="">
 					</div>
 				</div>
 			</section><!-- GALLERY END -->
@@ -28,9 +43,14 @@ get_header();
 			<!-- About -->
 			<section>
 				<div class="container">
-					<h1>About Me</h1>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia doloribus, reprehenderit, eveniet voluptatum eaque necessitatibus illum nihil placeat rerum voluptates consequatur qui ratione. Ad voluptates deleniti voluptate pariatur, error hic nihil nesciunt esse doloremque, sequi in alias quod?</p>
-					<button>Contact Me</button>
+					<div>
+						<h1>About Me</h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia doloribus, reprehenderit, eveniet voluptatum eaque necessitatibus illum nihil placeat rerum voluptates consequatur qui ratione. Ad voluptates deleniti voluptate pariatur, error hic nihil nesciunt esse doloremque, sequi in alias quod?</p>
+						<button>Contact Me</button>
+					</div>
+					<div>
+						<img src="https://placekitten.com/600/600" alt="">
+					</div>
 				</div>
 			</section><!-- ABOUT END-->
 
@@ -74,7 +94,20 @@ get_header();
 			<!-- Instagram Feed -->
 			<section>
 				<div class="container">
-				
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
+					<img src="https://placekitten.com/600/600" alt="">
 				</div>
 			</section><!-- INSTAGRAM END -->
 
