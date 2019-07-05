@@ -26,18 +26,34 @@ get_header();
 			</section><!-- HOME END -->
 
 			<!-- Gallery -->
-			<section>
+			<section id="gallery">
 				<div class="container">
 					<div class="gallery">
-						<img src="https://placekitten.com/600/600" alt="">
-						<img src="https://placekitten.com/600/600" alt="">
-						<img src="https://placekitten.com/600/600" alt="">
-						<img src="https://placekitten.com/600/600" alt="">
-						<img src="https://placekitten.com/600/600" alt="">
-						<img src="https://placekitten.com/600/600" alt="">
-						<img src="https://placekitten.com/600/600" alt="">
+						<div class="gallery-item">
+						<img src="https://placekitten.com/500/250" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/500/250" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/500/250" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/550/700" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/500/250" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/500/250" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/500/250" alt="">
+						</div>
+						
 					</div>
 				</div>
+				<div class="gallery-bg"></div>
 			</section><!-- GALLERY END -->
 
 			<!-- About -->

@@ -786,5 +786,46 @@ embed, iframe, object {
   color: #fff;
   margin-left: -50px;
   text-transform: uppercase;
-  word-break: break-all;
+}
+#gallery {
+  background-color: #fff;
+  padding: 7em 0;
+  position: relative;
+  z-index: 0;
+}
+#gallery .container {
+  z-index: 2;
+}
+#gallery .gallery {
+  background-color: #f00;
+  display: grid;
+  grid-gap: 10px;
+  grid-template: repeat(3, calc(33.334% - 20px)) / 1fr 1.3fr 1fr;
+  margin-bottom: 0;
+}
+#gallery .gallery .gallery-item {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+#gallery .gallery .gallery-item img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+}
+#gallery .gallery .gallery-item:nth-of-type(4) {
+  border: 1px solid #0ff;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+#gallery .gallery-bg {
+  background-color: #f00;
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
 }
