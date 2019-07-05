@@ -1,0 +1,40 @@
+// Nav bar
+.navbar {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50% !important;
+}
+
+// Hero 
+.hero-body {
+  height: 100vh;
+  padding: 0;
+  .container {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  #hero-headshot {
+    max-width: 50%;
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+  .hero-site-info {
+    h1 {
+      background-color: $color-secondary;
+      color: $color-white;
+      margin-left: -50px;
+      text-transform: uppercase;
+    }
+  }
+} // END HERO STYLES

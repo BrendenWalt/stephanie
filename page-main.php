@@ -13,12 +13,12 @@ get_header();
 			<section class="hero is-fullheight">
 				<div class="hero-body">
 					<div class="container">
-						<div>
+						<div id="hero-headshot">
 							<img src="https://placekitten.com/960/1080" alt="">
 						</div>
-						<div>
-							<h1>Stephanie<br>VanAlstine</h1>
-							<h3>Acts and sings real good</h3>
+						<div class="hero-site-info">
+							<h1><?php echo(get_bloginfo('name')) ?></h1>
+							<h3><?php echo(get_bloginfo('description')) ?></h3>
 						</div>
 						
 					</div>
