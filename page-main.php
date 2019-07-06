@@ -57,17 +57,19 @@ get_header();
 			</section><!-- GALLERY END -->
 
 			<!-- About -->
-			<section>
+			<section id="about">
 				<div class="container">
-					<div>
+					<div class="about-text-container">
 						<h1>About Me</h1>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia doloribus, reprehenderit, eveniet voluptatum eaque necessitatibus illum nihil placeat rerum voluptates consequatur qui ratione. Ad voluptates deleniti voluptate pariatur, error hic nihil nesciunt esse doloremque, sequi in alias quod?</p>
 						<button>Contact Me</button>
 					</div>
-					<div>
+					<div class="about-img">
 						<img src="https://placekitten.com/600/600" alt="">
 					</div>
+					
 				</div>
+				<div class="about-bg-box"></div>
 			</section><!-- ABOUT END-->
 
 			<!-- Resume -->
@@ -128,7 +130,7 @@ get_header();
 			</section><!-- INSTAGRAM END -->
 
 			<!-- Contact -->
-			<section>
+			<section id="contact">
 				<div class="container">
 					<h1>Contact</h1>
 					<div class="social-container"></div>
@@ -139,8 +141,24 @@ get_header();
 					<div class="contact-form">
 					</div>
 				</div>
-			
 			</section><!-- CONTACT END -->
+
+			<!-- Social -->
+			<aside id="social-menu">
+				<div class="container">
+					<div class="social-menu">
+						<div class="social-menu-item">
+							<i class="fab fa-instagram"></i>
+						</div>
+						<div class="social-menu-item">
+							<i class="fab fa-facebook-f"></i>
+						</div>
+						<div class="social-menu-item">
+							<i class="fab fa-youtube"></i>
+						</div>
+					</div>
+				</div>
+			</aside>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

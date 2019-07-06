@@ -641,7 +641,7 @@ a:hover, a:active {
   display: block;
 }
 .post, .page {
-  margin: 0 0 1.5em;
+  margin: 0;
 }
 .updated:not(.published) {
   display: none;
@@ -752,6 +752,9 @@ embed, iframe, object {
 /*--------------------------------------------------------------
  # Custom Theme
  --------------------------------------------------------------*/
+html, .body {
+  margin: 0 auto;
+}
 .navbar {
   background-color: transparent;
   position: fixed;
@@ -797,10 +800,9 @@ embed, iframe, object {
   z-index: 2;
 }
 #gallery .gallery {
-  background-color: #f00;
   display: grid;
   grid-gap: 10px;
-  grid-template: repeat(3, calc(33.334% - 20px)) / 1fr 1.3fr 1fr;
+  grid-template: repeat(3, calc(33.334%)) / 1fr 1.3fr 1fr;
   margin-bottom: 0;
 }
 #gallery .gallery .gallery-item {
@@ -815,17 +817,66 @@ embed, iframe, object {
   width: 100%;
 }
 #gallery .gallery .gallery-item:nth-of-type(4) {
-  border: 1px solid #0ff;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 4;
 }
 #gallery .gallery-bg {
-  background-color: #f00;
+  background-color: #f6f6f6;
   position: absolute;
   bottom: 0;
-  height: 100px;
+  height: 55%;
   width: 100%;
   z-index: 1;
+}
+#about {
+  padding: 7em 0;
+  position: relative;
+}
+#about .container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+}
+#about .about-text-container, #about .about-img {
+  background-color: transparent;
+  z-index: 1;
+}
+#about .about-img img {
+  display: block;
+}
+#about .about-bg-box {
+  background-color: #ff0090;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 25%;
+  z-index: 0;
+}
+#contact {
+  background-color: #0197de;
+  padding: 4em 0;
+}
+#social-menu {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#social-menu .container {
+  width: auto;
+}
+#social-menu .social-menu {
+  background-color: #0197de;
+  padding: 0.75em 10px;
+}
+#social-menu .social-menu-item {
+  text-align: center;
+  padding: 0.65em 0;
+}
+#social-menu .social-menu-item i {
+  color: #fff;
+  display: block;
+  font-size: 1.5rem;
 }
