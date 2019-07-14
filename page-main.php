@@ -73,7 +73,7 @@ get_header();
 			</section><!-- ABOUT END-->
 
 			<!-- Resume -->
-			<section>
+			<section id="resume">
 				<div class="container">
 					<h1>Resume</h1>
 					<!-- Experience -->
@@ -92,8 +92,14 @@ get_header();
 				
 				<!-- Banner -->
 				<div class="resume-banner">
-					<h3>Download Full Resume</h3>
-					<button>Download</button>
+					<div>
+						<h3>Download Full Resume</h3>
+					</div>
+					<div class="btn">
+						<button>Download</button>
+					</div>
+					
+					
 				</div>
 			</section><!-- RESUME END -->
 
