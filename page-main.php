@@ -17,7 +17,7 @@ get_header();
 							<img src="https://placekitten.com/960/1080" alt="">
 						</div>
 						<div class="hero-site-info">
-							<h1><?php echo(get_bloginfo('name')) ?></h1>
+							<h1 id="site-name"><?php echo(get_bloginfo('name')) ?></h1>
 							<h3><?php echo(get_bloginfo('description')) ?></h3>
 						</div>
 						
