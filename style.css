@@ -782,7 +782,15 @@ html, .body {
   flex-direction: row;
   height: 100%;
   max-width: 100%;
+  position: relative;
   width: 100%;
+}
+.hero-body .hero-bg {
+  background-color: #f00;
+  position: absolute;
+  height: 60vw;
+  width: 100%;
+  z-index: -1;
 }
 .hero-body #hero-headshot {
   max-width: 50%;
@@ -793,12 +801,25 @@ html, .body {
   object-fit: cover;
   object-position: 50% 50%;
 }
-.hero-body .hero-site-info h1 {
-  background-color: #ff0090;
-  color: #fff;
+.hero-body .hero-site-info .name-container {
+  display: inline-block;
   margin-bottom: 10px;
   margin-left: -50px;
+}
+.hero-body .hero-site-info .name-line {
+  display: block;
+}
+.hero-body .hero-site-info .name-line div {
+  background-color: #ff0090;
+  display: inline-block;
+  padding: 0.1em 0.1em;
+}
+.hero-body .hero-site-info h1 {
+  color: #fff;
   text-transform: uppercase;
+  line-height: 0.8em;
+  font-size: 7em;
+  margin: 0;
 }
 .hero-body .hero-site-info h3 {
   margin-left: 0.7em;

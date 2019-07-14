@@ -17,10 +17,25 @@ get_header();
 							<img src="https://placekitten.com/960/1080" alt="">
 						</div>
 						<div class="hero-site-info">
-							<h1 id="site-name"><?php echo(get_bloginfo('name')) ?></h1>
+							<div class="name-container">
+								<h1 id="site-name">
+									<div class="name-line">
+										<div>
+											Stephanie
+										</div>
+									</div>
+									<div class="name-line">
+										<div>
+											VanAlstine
+										</div>
+									</div>
+									
+								</h1>
+							</div>
+							
 							<h3><?php echo(get_bloginfo('description')) ?></h3>
 						</div>
-						
+						<div class="hero-bg"></div>
 					</div>
 				</div>
 			</section><!-- HOME END -->
