@@ -121,7 +121,7 @@ html,.body { margin: 0 auto; }
 
 // About
 #about {
-  padding: 7em 0;
+  padding: 3em 0;
   position: relative;
   .container {
     align-items: center;
@@ -176,6 +176,32 @@ html,.body { margin: 0 auto; }
 #contact {
   background-color: $color-primary;
   padding: 4em 0;
+  h1 {
+    color: $color-white;
+    text-align: center;
+    margin: 0;
+  }
+  .contact-header {
+    text-align: center;
+  }
+  .social-container {
+    display: inline-block;
+    margin: 0 auto;
+    i {
+      padding: 0 0.5em;
+    }
+  }
+}
+
+.social-menu-item {
+  display: inline-block;
+  text-align: center;
+  padding: 0.65em 0;
+  i {
+    color: $color-white;
+    display: inline-block;
+    font-size: 1.5rem;
+  }
 }
 
 // SOCIAL MEDIA SIDEBAR
@@ -190,14 +216,9 @@ html,.body { margin: 0 auto; }
   .social-menu {
     background-color: $color-primary;
     padding: 0.75em 10px;
-  }
-  .social-menu-item {
-    text-align: center;
-    padding: 0.65em 0;
-    i {
-      color: $color-white;
+    .social-menu-item {
       display: block;
-      font-size: 1.5rem;
     }
   }
+  
 }

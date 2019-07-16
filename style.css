@@ -865,7 +865,7 @@ html, .body {
   z-index: 1;
 }
 #about {
-  padding: 7em 0;
+  padding: 3em 0;
   position: relative;
 }
 #about .container {
@@ -915,6 +915,31 @@ html, .body {
   background-color: #0197de;
   padding: 4em 0;
 }
+#contact h1 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+#contact .contact-header {
+  text-align: center;
+}
+#contact .social-container {
+  display: inline-block;
+  margin: 0 auto;
+}
+#contact .social-container i {
+  padding: 0 0.5em;
+}
+.social-menu-item {
+  display: inline-block;
+  text-align: center;
+  padding: 0.65em 0;
+}
+.social-menu-item i {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+}
 #social-menu {
   position: fixed;
   right: 0;
@@ -928,12 +953,6 @@ html, .body {
   background-color: #0197de;
   padding: 0.75em 10px;
 }
-#social-menu .social-menu-item {
-  text-align: center;
-  padding: 0.65em 0;
-}
-#social-menu .social-menu-item i {
-  color: #fff;
+#social-menu .social-menu .social-menu-item {
   display: block;
-  font-size: 1.5rem;
 }

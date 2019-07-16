@@ -153,8 +153,23 @@ get_header();
 			<!-- Contact -->
 			<section id="contact">
 				<div class="container">
-					<h1>Contact</h1>
-					<div class="social-container"></div>
+					<div class="contact-header">
+						<h1>
+							Contact
+						</h1>
+						<div class="social-container">
+							<div class="social-menu-item">
+								<i class="fab fa-instagram"></i>
+							</div>
+							<div class="social-menu-item">
+								<i class="fab fa-facebook-f"></i>
+							</div>
+							<div class="social-menu-item">
+								<i class="fab fa-youtube"></i>
+						</div>
+						</div>
+					</div>
+					
 					<div>
 						<h3>Header</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eos mollitia repudiandae, amet nisi non?</p>
