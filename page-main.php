@@ -77,7 +77,7 @@ get_header();
 					<div class="about-text-container">
 						<h1>About Me</h1>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia doloribus, reprehenderit, eveniet voluptatum eaque necessitatibus illum nihil placeat rerum voluptates consequatur qui ratione. Ad voluptates deleniti voluptate pariatur, error hic nihil nesciunt esse doloremque, sequi in alias quod?</p>
-						<button>Contact Me</button>
+						<button class="btn btn-primary">Contact Me</button>
 					</div>
 					<div class="about-img">
 						<img src="https://placekitten.com/600/600" alt="">
@@ -91,18 +91,22 @@ get_header();
 			<section id="resume">
 				<div class="container">
 					<h1>Resume</h1>
-					<!-- Experience -->
-					<div class="resume-container">
-						<h3>Experience</h3>
+
+					<div class="resume-details-container">
+						<!-- Experience -->
+						<div class="resume-container">
+							<h3>Experience</h3>
+						</div>
+						<!-- Special Skills -->
+						<div class="resume-container">
+							<h3>Special Skills</h3>
+						</div>
+						<!-- Education -->
+						<div class="resume-container">
+							<h3>Education</h3>
+						</div>
 					</div>
-					<!-- Special Skills -->
-					<div class="resume-container">
-						<h3>Special Skills</h3>
-					</div>
-					<!-- Education -->
-					<div class="resume-container">
-						<h3>Education</h3>
-					</div>
+					
 				</div>
 				
 				<!-- Banner -->
@@ -111,7 +115,7 @@ get_header();
 						<h3>Download Full Resume</h3>
 					</div>
 					<div class="btn">
-						<button>Download</button>
+						<button class="btn btn-secondary">Download</button>
 					</div>
 					
 					
@@ -124,9 +128,22 @@ get_header();
 			</section><!-- VIDEOS END -->
 
 			<!-- Upcoming -->
-			<section>
+			<section id="upcoming-appearances">
 				<div class="container">
 					<h1>Upcoming Appearances</h1>
+					<div class="appearances-container">
+						<div class="appearance-container">
+							<div class="appearance-date">
+								<span>25</span>JUN
+							</div>
+							<div class="appearance-name">
+								Appearance Name Goes Here
+							</div>
+							<div class="appearance-cta">
+								<button class="btn btn-secondary">Learn More</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section><!--UPCOMING END -->
 

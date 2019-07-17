@@ -1,4 +1,34 @@
+// General Styles
 html,.body { margin: 0 auto; }
+.btn {
+  border-radius: 0;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 0.75em 1.5em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.btn-primary {
+  background-color: $color-primary;
+  color: $color-white;
+}
+.btn-secondary {
+  background-color: $color-white;
+  color: $color-primary;
+}
+.social-menu-item {
+  display: inline-block;
+  text-align: center;
+  padding: 0.65em 0;
+  i {
+    color: $color-white;
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+}
+
 // Nav bar
 .navbar {
   background-color: transparent;
@@ -78,7 +108,7 @@ html,.body { margin: 0 auto; }
 // Gallery Styles
 #gallery {
   background-color: $color-white;
-  padding: 7em 0;
+  padding: 5em 0;
   position: relative;
   z-index: 0;
   .container {
@@ -118,7 +148,6 @@ html,.body { margin: 0 auto; }
   
 }
 
-
 // About
 #about {
   padding: 3em 0;
@@ -156,6 +185,18 @@ html,.body { margin: 0 auto; }
 
 //RESUME
 #resume {
+  background-color: $color-bg-gray;
+  padding: 1.5em 0 0;
+  h1 {
+    margin: 0;
+    text-align: center; 
+    text-transform: uppercase;
+  }
+  .resume-container {
+    background-color: $color-white;
+    padding: 3em;
+    margin: 1em;
+  }
   .resume-banner {
     background-color: $color-primary;
     display: flex;
@@ -173,8 +214,47 @@ html,.body { margin: 0 auto; }
   }
 }
 
+// UPCOMING APPEARANCES
+#upcoming-appearances {
+  h1 {
+    text-align: center;
+  }
+  .appearances-container {
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+    z-index: 0;
+  }
+  .appearance-container {
+    background-color: $color-primary;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5em 0;
+    padding: 2em;
+    position: relative;
+    width: 100%;
+    &:after {
+      content: "";
+      background-color: $color-secondary;
+      position: absolute;
+      top: -7px;
+      left: -7px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    div {
+      display: inline-block;
+    }
+  }
+}
+
+// CONTACT
 #contact {
   background-color: $color-primary;
+  color: $color-white;
   padding: 4em 0;
   h1 {
     color: $color-white;
@@ -193,16 +273,7 @@ html,.body { margin: 0 auto; }
   }
 }
 
-.social-menu-item {
-  display: inline-block;
-  text-align: center;
-  padding: 0.65em 0;
-  i {
-    color: $color-white;
-    display: inline-block;
-    font-size: 1.5rem;
-  }
-}
+
 
 // SOCIAL MEDIA SIDEBAR
 #social-menu {

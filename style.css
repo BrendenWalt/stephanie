@@ -755,6 +755,34 @@ embed, iframe, object {
 html, .body {
   margin: 0 auto;
 }
+.btn {
+  border-radius: 0;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 0.75em 1.5em;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: #0197de;
+  color: #fff;
+}
+.btn-secondary {
+  background-color: #fff;
+  color: #0197de;
+}
+.social-menu-item {
+  display: inline-block;
+  text-align: center;
+  padding: 0.65em 0;
+}
+.social-menu-item i {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+}
 .navbar {
   background-color: transparent;
   position: fixed;
@@ -826,7 +854,7 @@ html, .body {
 }
 #gallery {
   background-color: #fff;
-  padding: 7em 0;
+  padding: 5em 0;
   position: relative;
   z-index: 0;
 }
@@ -896,6 +924,20 @@ html, .body {
 #about .about-text-container h1 {
   margin-top: 0;
 }
+#resume {
+  background-color: #f6f6f6;
+  padding: 1.5em 0 0;
+}
+#resume h1 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+#resume .resume-container {
+  background-color: #fff;
+  padding: 3em;
+  margin: 1em;
+}
 #resume .resume-banner {
   background-color: #0197de;
   display: flex;
@@ -911,8 +953,42 @@ html, .body {
   display: inline-block;
   margin: 0 auto;
 }
+#upcoming-appearances h1 {
+  text-align: center;
+}
+#upcoming-appearances .appearances-container {
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+  z-index: 0;
+}
+#upcoming-appearances .appearance-container {
+  background-color: #0197de;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+}
+#upcoming-appearances .appearance-container:after {
+  content: "";
+  background-color: #ff0090;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#upcoming-appearances .appearance-container div {
+  display: inline-block;
+}
 #contact {
   background-color: #0197de;
+  color: #fff;
   padding: 4em 0;
 }
 #contact h1 {
@@ -929,16 +1005,6 @@ html, .body {
 }
 #contact .social-container i {
   padding: 0 0.5em;
-}
-.social-menu-item {
-  display: inline-block;
-  text-align: center;
-  padding: 0.65em 0;
-}
-.social-menu-item i {
-  color: #fff;
-  display: inline-block;
-  font-size: 1.5rem;
 }
 #social-menu {
   position: fixed;
