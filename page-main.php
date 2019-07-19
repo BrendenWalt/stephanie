@@ -82,9 +82,7 @@ get_header();
 					<div class="about-img">
 						<img src="https://placekitten.com/600/600" alt="">
 					</div>
-					
 				</div>
-				<div class="about-bg-box"></div>
 			</section><!-- ABOUT END-->
 
 			<!-- Resume -->
@@ -143,27 +141,80 @@ get_header();
 								<button class="btn btn-secondary">Learn More</button>
 							</div>
 						</div>
+						<div class="appearance-container">
+							<div class="appearance-date">
+								<span>25</span>JUN
+							</div>
+							<div class="appearance-name">
+								Appearance Name Goes Here
+							</div>
+							<div class="appearance-cta">
+								<button class="btn btn-secondary">Learn More</button>
+							</div>
+						</div>
+						<div class="appearance-container">
+							<div class="appearance-date">
+								<span>25</span>JUN
+							</div>
+							<div class="appearance-name">
+								Appearance Name Goes Here
+							</div>
+							<div class="appearance-cta">
+								<button class="btn btn-secondary">Learn More</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section><!--UPCOMING END -->
 
 			<!-- Instagram Feed -->
-			<section>
+			<section id="follow-on-instagram">
 				<div class="container">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
-					<img src="https://placekitten.com/600/600" alt="">
+					<div class="social-menu-item">
+						<i class="fab fa-instagram"></i>
+					</div>
+					<div class="gallery-grid">
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+						<div class="gallery-item">
+							<img src="https://placekitten.com/600/600" alt="">
+						</div>
+					
+						
+						
+					</div>
+					
 				</div>
 			</section><!-- INSTAGRAM END -->
 

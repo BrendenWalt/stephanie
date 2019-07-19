@@ -117,7 +117,7 @@ html,.body { margin: 0 auto; }
   .gallery {
     display: grid;
     grid-gap: 10px;
-    grid-template: repeat(3, calc(33.334%)) / 1fr 1.3fr 1fr;
+    grid-template: repeat(3, calc(32.334%)) / 1fr 1.3fr 1fr;
     margin-bottom: 0;
     .gallery-item { 
       object-fit: cover;
@@ -134,7 +134,7 @@ html,.body { margin: 0 auto; }
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 1;
-      grid-row-end: 4;
+      grid-row-end: -1;
     }
   }
   .gallery-bg {
@@ -152,32 +152,39 @@ html,.body { margin: 0 auto; }
 #about {
   padding: 3em 0;
   position: relative;
+  &:after {
+    content: "";
+    background-color: $color-secondary;
+    position: absolute;
+    top: 17%;
+    left: 0;
+    height: 66%;
+    width: 100%;
+  }
   .container {
     align-items: center;
     background-color: transparent;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
   }
   .about-text-container,
   .about-img {
     background-color: transparent;
     z-index: 1;
   }
+  .about-img {
+    justify-self: flex-end;
+    width: 30%;
+  }
   .about-img img {
     display: block;
   }
-  .about-bg-box {
-    background-color: $color-secondary;
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    top: 25%;
-    z-index: 0;
-  }
   .about-text-container {
     color: #ffffff;
+    width: 50%;
     h1 {
+      margin-bottom: 0.25em;
       margin-top: 0;
     }
   }
@@ -216,12 +223,16 @@ html,.body { margin: 0 auto; }
 
 // UPCOMING APPEARANCES
 #upcoming-appearances {
+  background-color: $color-bg-gray;
+  padding: 3em 0 4em;
   h1 {
     text-align: center;
+    margin: 0 auto 1em;
   }
   .appearances-container {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
+    max-width: 1075px;
     position: relative;
     z-index: 0;
   }
@@ -231,23 +242,53 @@ html,.body { margin: 0 auto; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0.5em 0;
+    margin: 1.5em 0;
     padding: 2em;
     position: relative;
     width: 100%;
-    &:after {
-      content: "";
-      background-color: $color-secondary;
-      position: absolute;
-      top: -7px;
-      left: -7px;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+    box-shadow: -7px -6px 0 0 $color-secondary;
     div {
       display: inline-block;
     }
+  }
+}
+
+// SOCIAL FEED
+#follow-on-instagram {
+  padding: 3em 0;
+  .container {
+    background-color: $color-bg-gray;
+    box-shadow: -10px -10px 0 0 $color-secondary;
+    padding: 1em 0 2.5em;
+  }
+  .gallery-grid {
+    display: grid;
+    width: 80%; 
+    margin: 0 auto;
+    max-width: 1075px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 32.334%);
+    grid-gap: 5px;
+  }
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(6) {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+  }
+  .gallery-item img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+  }
+  .social-menu-item {
+    display: block;
+    margin: 0 auto 0.5em;
+  }
+  .social-menu-item i{
+    color: $color-primary;
+    font-size: 2.5em;
+    text-align: center;
   }
 }
 

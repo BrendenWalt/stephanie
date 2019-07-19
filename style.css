@@ -864,7 +864,7 @@ html, .body {
 #gallery .gallery {
   display: grid;
   grid-gap: 10px;
-  grid-template: repeat(3, calc(33.334%)) / 1fr 1.3fr 1fr;
+  grid-template: repeat(3, calc(32.334%)) / 1fr 1.3fr 1fr;
   margin-bottom: 0;
 }
 #gallery .gallery .gallery-item {
@@ -882,7 +882,7 @@ html, .body {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 4;
+  grid-row-end: -1;
 }
 #gallery .gallery-bg {
   background-color: #f6f6f6;
@@ -896,32 +896,39 @@ html, .body {
   padding: 3em 0;
   position: relative;
 }
+#about:after {
+  content: "";
+  background-color: #ff0090;
+  position: absolute;
+  top: 17%;
+  left: 0;
+  height: 66%;
+  width: 100%;
+}
 #about .container {
   align-items: center;
   background-color: transparent;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 #about .about-text-container, #about .about-img {
   background-color: transparent;
   z-index: 1;
 }
+#about .about-img {
+  justify-self: flex-end;
+  width: 30%;
+}
 #about .about-img img {
   display: block;
 }
-#about .about-bg-box {
-  background-color: #ff0090;
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  top: 25%;
-  z-index: 0;
-}
 #about .about-text-container {
   color: #fff;
+  width: 50%;
 }
 #about .about-text-container h1 {
+  margin-bottom: 0.25em;
   margin-top: 0;
 }
 #resume {
@@ -953,12 +960,18 @@ html, .body {
   display: inline-block;
   margin: 0 auto;
 }
+#upcoming-appearances {
+  background-color: #f6f6f6;
+  padding: 3em 0 4em;
+}
 #upcoming-appearances h1 {
   text-align: center;
+  margin: 0 auto 1em;
 }
 #upcoming-appearances .appearances-container {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
+  max-width: 1075px;
   position: relative;
   z-index: 0;
 }
@@ -968,23 +981,50 @@ html, .body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0.5em 0;
+  margin: 1.5em 0;
   padding: 2em;
   position: relative;
   width: 100%;
-}
-#upcoming-appearances .appearance-container:after {
-  content: "";
-  background-color: #ff0090;
-  position: absolute;
-  top: -7px;
-  left: -7px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  box-shadow: -7px -6px 0 0 #ff0090;
 }
 #upcoming-appearances .appearance-container div {
   display: inline-block;
+}
+#follow-on-instagram {
+  padding: 3em 0;
+}
+#follow-on-instagram .container {
+  background-color: #f6f6f6;
+  box-shadow: -10px -10px 0 0 #ff0090;
+  padding: 1em 0 2.5em;
+}
+#follow-on-instagram .gallery-grid {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1075px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 32.334%);
+  grid-gap: 5px;
+}
+#follow-on-instagram .gallery-item:nth-child(1), #follow-on-instagram .gallery-item:nth-child(6) {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+#follow-on-instagram .gallery-item img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  height: 100%;
+  width: 100%;
+}
+#follow-on-instagram .social-menu-item {
+  display: block;
+  margin: 0 auto 0.5em;
+}
+#follow-on-instagram .social-menu-item i {
+  color: #0197de;
+  font-size: 2.5em;
+  text-align: center;
 }
 #contact {
   background-color: #0197de;
