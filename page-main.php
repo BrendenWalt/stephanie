@@ -68,7 +68,7 @@ get_header();
 						
 					</div>
 				</div>
-				<div class="gallery-bg"></div>
+				
 			</section><!-- GALLERY END -->
 
 			<!-- About -->

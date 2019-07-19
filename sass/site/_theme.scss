@@ -111,6 +111,15 @@ html,.body { margin: 0 auto; }
   padding: 5em 0;
   position: relative;
   z-index: 0;
+  &:after {
+    content: "";
+    background-color: $color-bg-gray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+  }
   .container {
     z-index: 2;
   }
@@ -150,15 +159,15 @@ html,.body { margin: 0 auto; }
 
 // About
 #about {
-  padding: 3em 0;
+  padding: 5em 0;
   position: relative;
   &:after {
     content: "";
     background-color: $color-secondary;
     position: absolute;
-    top: 17%;
+    top: 18%;
     left: 0;
-    height: 66%;
+    height: 64%;
     width: 100%;
   }
   .container {
@@ -175,7 +184,7 @@ html,.body { margin: 0 auto; }
   }
   .about-img {
     justify-self: flex-end;
-    width: 30%;
+    width: 35%;
   }
   .about-img img {
     display: block;
@@ -201,8 +210,17 @@ html,.body { margin: 0 auto; }
   }
   .resume-container {
     background-color: $color-white;
-    padding: 3em;
-    margin: 1em;
+    padding: 1em 1.5em;
+    margin: 0;
+    &:nth-child(1) {
+      grid-row-end: span 2;
+    }
+  } 
+  .resume-details-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1.5fr 1fr;
+    margin: 1em auto 3em;
   }
   .resume-banner {
     background-color: $color-primary;

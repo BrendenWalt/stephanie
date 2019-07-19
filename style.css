@@ -858,6 +858,15 @@ html, .body {
   position: relative;
   z-index: 0;
 }
+#gallery:after {
+  content: "";
+  background-color: #f6f6f6;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
 #gallery .container {
   z-index: 2;
 }
@@ -893,16 +902,16 @@ html, .body {
   z-index: 1;
 }
 #about {
-  padding: 3em 0;
+  padding: 5em 0;
   position: relative;
 }
 #about:after {
   content: "";
   background-color: #ff0090;
   position: absolute;
-  top: 17%;
+  top: 18%;
   left: 0;
-  height: 66%;
+  height: 64%;
   width: 100%;
 }
 #about .container {
@@ -918,7 +927,7 @@ html, .body {
 }
 #about .about-img {
   justify-self: flex-end;
-  width: 30%;
+  width: 35%;
 }
 #about .about-img img {
   display: block;
@@ -942,8 +951,17 @@ html, .body {
 }
 #resume .resume-container {
   background-color: #fff;
-  padding: 3em;
-  margin: 1em;
+  padding: 1em 1.5em;
+  margin: 0;
+}
+#resume .resume-container:nth-child(1) {
+  grid-row-end: span 2;
+}
+#resume .resume-details-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1.5fr 1fr;
+  margin: 1em auto 3em;
 }
 #resume .resume-banner {
   background-color: #0197de;
