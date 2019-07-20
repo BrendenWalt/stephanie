@@ -93,15 +93,42 @@ get_header();
 					<div class="resume-details-container">
 						<!-- Experience -->
 						<div class="resume-container">
-							<h3>Experience</h3>
+							<h2>Experience</h2>
+							<div class="experience-list">
+								<div class="experience-category">
+									<h4>Theater</h4>
+									<div class="experience-list-item">
+										<div class="list-item-title">
+										</div>
+										<div class="list-item-details"></div>
+									</div>
+								</div>
+								<div class="experience-category">
+									<h4>TV/Film</h4>
+									<div class="experience-list-item">
+										<div class="list-item-title">
+										</div>
+										<div class="list-item-details"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<!-- Special Skills -->
 						<div class="resume-container">
-							<h3>Special Skills</h3>
+							<h2>Special Skills</h2>
+							<div class="skills-list">
+								<div class="skills-item"></div>
+							</div>
 						</div>
 						<!-- Education -->
 						<div class="resume-container">
-							<h3>Education</h3>
+							<h2>Education</h2>
+							<div class="education-list">
+								<div class="education-item">
+									<div class="education-title">Name of Degree Here</div>
+									<div class="education-detail">Name of School | 2012</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					
