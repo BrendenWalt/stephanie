@@ -1153,8 +1153,40 @@ html, .body {
   text-align: center;
   margin: 0;
 }
+#contact .contact-form form p {
+  margin: 0.25em auto;
+}
+#contact .contact-form form p:last-of-type {
+  margin-top: 0;
+}
+#contact .contact-form form input, #contact .contact-form form textarea {
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 0;
+  color: #fff;
+  padding: 0.25em 0.45em;
+  width: 100%;
+}
+#contact .contact-form form input::placeholder, #contact .contact-form form textarea::placeholder {
+  color: #fff;
+}
+#contact .contact-form form input:focus, #contact .contact-form form textarea:focus {
+  border: 1px solid #ff0090;
+}
+#contact .contact-form form input[type="submit"] {
+  background-color: #fff;
+  color: #0197de;
+  font-weight: bold;
+  padding: 1em 3em;
+  width: auto;
+  float: right;
+}
+#contact .contact-form form input[type="submit"]:hover {
+  cursor: pointer;
+}
 #contact .contact-header {
   text-align: center;
+  text-transform: uppercase;
 }
 #contact .contact-info-container {
   display: grid;

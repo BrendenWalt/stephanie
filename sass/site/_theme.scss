@@ -424,8 +424,43 @@ html,.body { margin: 0 auto; }
     text-align: center;
     margin: 0;
   }
+  .contact-form form {
+    p {
+      margin: .25em auto;
+      &:last-of-type {
+        margin-top: 0;
+      }
+    }
+    input,
+    textarea {
+      border: 1px solid $color-white;
+      background-color: transparent;
+      border-radius: 0;
+      color: $color-white;
+      padding: .25em 0.45em;
+      width: 100%;
+      &::placeholder {
+        color: $color-white;
+      }
+      &:focus {
+        border: 1px solid $color-secondary;
+      }
+    }
+    input[type="submit"] {
+      background-color: $color-white;
+      color: $color-primary;
+      font-weight: bold;
+      padding: 1em 3em;
+      width: auto;
+      float: right;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
   .contact-header {
     text-align: center;
+    text-transform: uppercase;
   }
   .contact-info-container {
     display: grid;
