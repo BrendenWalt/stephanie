@@ -99,16 +99,46 @@ get_header();
 									<h4>Theater</h4>
 									<div class="experience-list-item">
 										<div class="list-item-title">
+											Show Title
 										</div>
-										<div class="list-item-details"></div>
+										<div class="list-item-details">
+											Role Name | Production Company | 2019
+										</div>
+									</div>
+									<div class="experience-list-item">
+										<div class="list-item-title">
+											Show Title
+										</div>
+										<div class="list-item-details">
+											Role Name | Production Company | 2019
+										</div>
+									</div>
+									<div class="experience-list-item">
+										<div class="list-item-title">
+											Show Title
+										</div>
+										<div class="list-item-details">
+											Role Name | Production Company | 2019
+										</div>
 									</div>
 								</div>
 								<div class="experience-category">
 									<h4>TV/Film</h4>
 									<div class="experience-list-item">
 										<div class="list-item-title">
+											Show Title
 										</div>
-										<div class="list-item-details"></div>
+										<div class="list-item-details">
+											Role Name | Production Company | 2019
+										</div>
+									</div>
+									<div class="experience-list-item">
+										<div class="list-item-title">
+											Show Title
+										</div>
+										<div class="list-item-details">
+											Role Name | Production Company | 2019
+										</div>
 									</div>
 								</div>
 							</div>
@@ -117,7 +147,9 @@ get_header();
 						<div class="resume-container">
 							<h2>Special Skills</h2>
 							<div class="skills-list">
-								<div class="skills-item"></div>
+								<div class="skills-item">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae esse odit dolorum accusamus consequuntur quidem fuga voluptate nulla assumenda. Dolorum!
+								</div>
 							</div>
 						</div>
 						<!-- Education -->
@@ -148,8 +180,20 @@ get_header();
 			</section><!-- RESUME END -->
 
 			<!-- Videos -->
-			<section>
-				<div class="container"></div>
+			<section id="videos">
+				<div class="container">
+					<div class="video-grid">
+						<div class="video-item">
+							<img src="https://placekitten.com/1920/1080" alt="">
+						</div>
+						<div class="video-item">
+							<img src="https://placekitten.com/1920/1080" alt="">
+						</div>
+						<div class="video-item">
+							<img src="https://placekitten.com/1920/1080" alt="">
+						</div>
+					</div>
+				</div>
 			</section><!-- VIDEOS END -->
 
 			<!-- Upcoming -->

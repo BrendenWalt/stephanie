@@ -174,9 +174,9 @@ html,.body { margin: 0 auto; }
     content: "";
     background-color: $color-secondary;
     position: absolute;
-    top: 18%;
-    left: 0;
-    height: 64%;
+    top: 19%;
+    // left: 0;
+    height: 62%;
     width: 100%;
   }
   .container {
@@ -217,12 +217,20 @@ html,.body { margin: 0 auto; }
     text-align: center; 
     text-transform: uppercase;
   }
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+  h4 {
+    color: $color-primary
+  }
   .resume-container {
     background-color: $color-white;
     padding: 1em 1.5em;
     margin: 0;
     &:nth-child(1) {
-      grid-row-end: span 2;
+      grid-row-end: span 3;
     }
   } 
   .resume-details-container {
@@ -245,13 +253,36 @@ html,.body { margin: 0 auto; }
         border-bottom: 5px solid $color-secondary;
       }
     }
+    .education-title {
+      text-transform: uppercase;
+    }
+    .experience-list,
+    .experience-list-item {
+      padding-left: 2em;
+    }
+    .experience-list-item {
+      margin: 0.5em 0;
+      &:last-of-type {
+        margin-bottom: 1.75em;
+      }
+    }
+    .list-item-title,
+    .education-title {
+      font-weight: bold;
+      font-size: 1.15em;
+    }
+    .list-item-details,
+    .education-detail {
+      font-weight: 300;
+      font-size: 1em;
+    }
   }
   .resume-banner {
     background-color: $color-primary;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 5vh 0;
+    padding: 1.75em 0;
     h3 {
       color: $color-white;
       text-align: center;
@@ -260,6 +291,26 @@ html,.body { margin: 0 auto; }
       display: inline-block;
       margin: 0 auto;
     }
+  }
+}
+
+#videos {
+  padding: 4em 0;
+  .video-grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 2fr 1fr;
+  }
+  .video-item {
+    height: 100%;
+    &:nth-of-type(1) {
+      grid-row: span 2;
+    }
+  }
+  .video-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -292,6 +343,14 @@ html,.body { margin: 0 auto; }
     div {
       display: inline-block;
     }
+  }
+  .appearance-date span{
+    font-size: 2.25em;
+    font-weight: bold;
+  }
+  .appearance-name {
+    font-size: 2em;
+    font-weight: 300;
   }
 }
 

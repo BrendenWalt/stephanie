@@ -324,10 +324,11 @@ template {
  --------------------------------------------------------------*/
 body, button, input, select, optgroup, textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
+  font-weight: 300;
 }
 h1, h2, h3, h4, h5, h6 {
   clear: both;
@@ -919,9 +920,8 @@ html, .body {
   content: "";
   background-color: #ff0090;
   position: absolute;
-  top: 18%;
-  left: 0;
-  height: 64%;
+  top: 19%;
+  height: 62%;
   width: 100%;
 }
 #about .container {
@@ -959,13 +959,21 @@ html, .body {
   text-align: center;
   text-transform: uppercase;
 }
+#resume h3 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+#resume h4 {
+  color: #0197de;
+}
 #resume .resume-container {
   background-color: #fff;
   padding: 1em 1.5em;
   margin: 0;
 }
 #resume .resume-container:nth-child(1) {
-  grid-row-end: span 2;
+  grid-row-end: span 3;
 }
 #resume .resume-details-container {
   display: grid;
@@ -988,12 +996,32 @@ html, .body {
   width: 65%;
   border-bottom: 5px solid #ff0090;
 }
+#resume .resume-details-container .education-title {
+  text-transform: uppercase;
+}
+#resume .resume-details-container .experience-list, #resume .resume-details-container .experience-list-item {
+  padding-left: 2em;
+}
+#resume .resume-details-container .experience-list-item {
+  margin: 0.5em 0;
+}
+#resume .resume-details-container .experience-list-item:last-of-type {
+  margin-bottom: 1.75em;
+}
+#resume .resume-details-container .list-item-title, #resume .resume-details-container .education-title {
+  font-weight: bold;
+  font-size: 1.15em;
+}
+#resume .resume-details-container .list-item-details, #resume .resume-details-container .education-detail {
+  font-weight: 300;
+  font-size: 1em;
+}
 #resume .resume-banner {
   background-color: #0197de;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 5vh 0;
+  padding: 1.75em 0;
 }
 #resume .resume-banner h3 {
   color: #fff;
@@ -1002,6 +1030,25 @@ html, .body {
 #resume .resume-banner .btn {
   display: inline-block;
   margin: 0 auto;
+}
+#videos {
+  padding: 4em 0;
+}
+#videos .video-grid {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 2fr 1fr;
+}
+#videos .video-item {
+  height: 100%;
+}
+#videos .video-item:nth-of-type(1) {
+  grid-row: span 2;
+}
+#videos .video-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 #upcoming-appearances {
   background-color: #f6f6f6;
@@ -1032,6 +1079,14 @@ html, .body {
 }
 #upcoming-appearances .appearance-container div {
   display: inline-block;
+}
+#upcoming-appearances .appearance-date span {
+  font-size: 2.25em;
+  font-weight: bold;
+}
+#upcoming-appearances .appearance-name {
+  font-size: 2em;
+  font-weight: 300;
 }
 #follow-on-instagram {
   padding: 3em 0;
