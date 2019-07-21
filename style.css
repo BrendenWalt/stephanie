@@ -323,7 +323,7 @@ template {
  # Typography
  --------------------------------------------------------------*/
 body, button, input, select, optgroup, textarea {
-  color: #404040;
+  color: #717171;
   font-family: 'Muli', sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -467,13 +467,13 @@ textarea {
  ## Links
  --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #717171;
 }
 a:visited {
-  color: purple;
+  color: #717171;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #0197de;
 }
 a:focus {
   outline: thin dotted;
@@ -800,6 +800,15 @@ html, .body {
   margin: 0 1.5em;
   text-align: center;
 }
+.navbar li a {
+  color: #717171;
+}
+.navbar li a:visited {
+  color: #717171;
+}
+.navbar li a:hover {
+  color: #0197de;
+}
 .hero-body {
   background-color: transparent;
   height: 100vh;
@@ -849,9 +858,16 @@ html, .body {
   display: block;
 }
 .hero-body .hero-site-info .name-line div {
+  font-family: 'Oswald', sans-serif;
   background-color: #ff0090;
   display: inline-block;
-  padding: 0.1em 0.1em;
+  padding: 0.08em 0.05em;
+}
+.hero-body .hero-site-info .name-line:nth-of-type(1) div {
+  padding-top: 0.05em;
+}
+.hero-body .hero-site-info .name-line:nth-of-type(2) div {
+  padding-bottom: 0.125em;
 }
 .hero-body .hero-site-info h1 {
   color: #fff;
@@ -861,6 +877,8 @@ html, .body {
   margin: 0;
 }
 .hero-body .hero-site-info h3 {
+  color: #717171;
+  font-size: 1.5em;
   margin-left: 0.7em;
 }
 #gallery {
@@ -1131,11 +1149,24 @@ html, .body {
 }
 #contact h1 {
   color: #fff;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   margin: 0;
 }
 #contact .contact-header {
   text-align: center;
+}
+#contact .contact-info-container {
+  display: grid;
+  grid-template-columns: 1fr minmax(550px, 1.25fr);
+  grid-gap: 1em;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#contact .contact-info-container > div {
+  width: 100%;
 }
 #contact .social-container {
   display: inline-block;

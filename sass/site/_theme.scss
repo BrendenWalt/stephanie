@@ -44,6 +44,16 @@ html,.body { margin: 0 auto; }
     list-style: none;
     margin: 0 1.5em;
     text-align: center;
+    a {
+      color: $color__link;
+      
+      &:visited {
+        color: $color__link-visited;
+      }
+      &:hover {
+        color: $color__link-hover;
+      }
+    }
   }
 }
 
@@ -96,9 +106,16 @@ html,.body { margin: 0 auto; }
     .name-line {
       display: block;
       div {
+        font-family: $font__header;
         background-color: $color-secondary;
         display: inline-block;
-        padding: 0.1em 0.1em;
+        padding: 0.08em .05em;;
+      }
+      &:nth-of-type(1) div {
+        padding-top: 0.05em
+      }
+      &:nth-of-type(2) div {
+        padding-bottom: 0.125em;
       }
     }
     h1 {
@@ -109,6 +126,8 @@ html,.body { margin: 0 auto; }
       margin: 0;
     }
     h3 {
+      color: $color__text-main;
+      font-size: 1.5em;
       margin-left: 0.7em;
     }
   }
@@ -294,6 +313,7 @@ html,.body { margin: 0 auto; }
   }
 }
 
+// Videos
 #videos {
   padding: 4em 0;
   .video-grid {
@@ -400,11 +420,24 @@ html,.body { margin: 0 auto; }
   padding: 4em 0;
   h1 {
     color: $color-white;
+    font-family: $font__header;
     text-align: center;
     margin: 0;
   }
   .contact-header {
     text-align: center;
+  }
+  .contact-info-container {
+    display: grid;
+    grid-template-columns: 1fr minmax(550px, 1.25fr);
+    grid-gap: 1em;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin:0 auto;
+    > div {
+      width: 100%;
+    }
   }
   .social-container {
     display: inline-block;

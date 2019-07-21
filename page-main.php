@@ -309,12 +309,18 @@ get_header();
 						</div>
 					</div>
 					
-					<div>
-						<h3>Header</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eos mollitia repudiandae, amet nisi non?</p>
+					<div class="contact-info-container">
+						<div>
+							<h3>Header</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eos mollitia repudiandae, amet nisi non?</p>
+						</div>
+						<div>
+							<div class="contact-form">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat, odit illum ea facilis officia.
+							</div>
+						</div>
 					</div>
-					<div class="contact-form">
-					</div>
+				
 				</div>
 			</section><!-- CONTACT END -->
 
