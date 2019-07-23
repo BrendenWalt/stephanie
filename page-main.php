@@ -4,7 +4,13 @@
 */
 
 // ACF Variables
+$main_image                              = get_field('main_image');
 $contact_form_shortcode                  = get_field('contact_form_shortcode');
+
+// Social media
+$instagram_url                           = get_field('instagram_url');
+$facebook_url                            = get_field('facebook_url');
+$youtube_url                             = get_field('youtube_url');
 
 get_header();
 ?>
@@ -14,10 +20,13 @@ get_header();
 
       <!-- Home -->
       <section class="hero is-fullheight">
+        <a name="home"></a>
         <div class="hero-body">
           <div class="container">
             <div id="hero-headshot">
-              <img src="https://placekitten.com/960/1080" alt="">
+              <?php if (!empty($main_image)): ?>
+                <img src="<?php echo($main_image['url']) ?>" alt="<?php echo($main_image['alt'])?>">
+              <?php endif; ?>
             </div>
             <div class="hero-site-info">
               <div class="name-container">
@@ -45,6 +54,7 @@ get_header();
 
       <!-- Gallery -->
       <section id="gallery">
+        <a name="gallery"></a>
         <div class="container">
           <div class="gallery">
             <div class="gallery-item">
@@ -70,12 +80,17 @@ get_header();
             </div>
             
           </div>
+          <div class="gallery-cta"> 
+            <button class="btn btn-primary">Gallery</button>
+          </div>
+          
         </div>
         
       </section><!-- GALLERY END -->
 
       <!-- About -->
       <section id="about">
+        <a name="about"></a>
         <div class="container">
           <div class="about-text-container">
             <h1>About Me</h1>
@@ -90,6 +105,7 @@ get_header();
 
       <!-- Resume -->
       <section id="resume">
+        <a name="resume"></a>
         <div class="container">
           <h1>Resume</h1>
 
@@ -184,6 +200,7 @@ get_header();
 
       <!-- Videos -->
       <section id="videos">
+        <a name="videos"></a>
         <div class="container">
           <div class="video-grid">
             <div class="video-item">
@@ -201,6 +218,7 @@ get_header();
 
       <!-- Upcoming -->
       <section id="upcoming-appearances">
+        <a name="upcoming"></a>
         <div class="container">
           <h1>Upcoming Appearances</h1>
           <div class="appearances-container">
@@ -245,48 +263,12 @@ get_header();
       <section id="follow-on-instagram">
         <div class="container">
           <div class="social-menu-item">
-            <i class="fab fa-instagram"></i>
+            <a href="<?php echo($instagram_url); ?>" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
           <div class="gallery-grid">
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/600/600" alt="">
-            </div>
-          
-            
-            
+            <?php echo do_shortcode('[instagram-feed]'); ?>
           </div>
           
         </div>
@@ -294,6 +276,7 @@ get_header();
 
       <!-- Contact -->
       <section id="contact">
+        <a name="contact"></a>
         <div class="container">
           <div class="contact-header">
             <h1>
@@ -301,14 +284,20 @@ get_header();
             </h1>
             <div class="social-container">
               <div class="social-menu-item">
-                <i class="fab fa-instagram"></i>
+                <a href="<?php echo($instagram_url); ?>" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
               </div>
               <div class="social-menu-item">
-                <i class="fab fa-facebook-f"></i>
+                <a href="<?php echo($facebook_url); ?>" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
               </div>
               <div class="social-menu-item">
-                <i class="fab fa-youtube"></i>
-            </div>
+                <a href="<?php echo($youtube_url); ?>" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
             </div>
           </div>
           
@@ -332,13 +321,19 @@ get_header();
         <div class="container">
           <div class="social-menu">
             <div class="social-menu-item">
-              <i class="fab fa-instagram"></i>
+              <a href="<?php echo($instagram_url); ?>" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
             <div class="social-menu-item">
-              <i class="fab fa-facebook-f"></i>
+              <a href="<?php echo($facebook_url); ?>" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
             </div>
             <div class="social-menu-item">
-              <i class="fab fa-youtube"></i>
+              <a href="<?php echo($youtube_url); ?>" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
             </div>
           </div>
         </div>
