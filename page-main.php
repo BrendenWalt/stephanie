@@ -54,11 +54,13 @@ get_header();
 
       <!-- Gallery -->
       <section id="gallery">
-        <a name="gallery"></a>
         <div class="container">
           <div class="gallery">
-            <div class="gallery-item">
-            <img src="https://placekitten.com/500/250" alt="">
+          <?php
+            if ( function_exists( 'envira_gallery' ) ) { envira_gallery( 'home-page-gallery', 'slug' ); }
+          ?>
+            <!-- <div class="gallery-item">
+              <img src="https://placekitten.com/500/250" alt="">
             </div>
             <div class="gallery-item">
               <img src="https://placekitten.com/500/250" alt="">
@@ -77,7 +79,7 @@ get_header();
             </div>
             <div class="gallery-item">
               <img src="https://placekitten.com/500/250" alt="">
-            </div>
+            </div> -->
             
           </div>
           <div class="gallery-cta"> 
@@ -90,7 +92,6 @@ get_header();
 
       <!-- About -->
       <section id="about">
-        <a name="about"></a>
         <div class="container">
           <div class="about-text-container">
             <h1>About Me</h1>
@@ -105,7 +106,6 @@ get_header();
 
       <!-- Resume -->
       <section id="resume">
-        <a name="resume"></a>
         <div class="container">
           <h1>Resume</h1>
 
@@ -200,7 +200,6 @@ get_header();
 
       <!-- Videos -->
       <section id="videos">
-        <a name="videos"></a>
         <div class="container">
           <div class="video-grid">
             <div class="video-item">
@@ -218,7 +217,6 @@ get_header();
 
       <!-- Upcoming -->
       <section id="upcoming-appearances">
-        <a name="upcoming"></a>
         <div class="container">
           <h1>Upcoming Appearances</h1>
           <div class="appearances-container">
@@ -276,7 +274,6 @@ get_header();
 
       <!-- Contact -->
       <section id="contact">
-        <a name="contact"></a>
         <div class="container">
           <div class="contact-header">
             <h1>

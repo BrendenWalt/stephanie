@@ -158,23 +158,40 @@ html,.body { margin: 0 auto; }
   .container {
     z-index: 2;
   }
-  .gallery {
+  .envira-gallery-public {
     display: grid;
     grid-gap: 10px;
-    grid-template: repeat(3, calc(32.334%)) / 1fr 1.3fr 1fr;
+    grid-template: repeat(3, 1fr) / 1fr 1fr 1fr;
     margin-bottom: 0;
+    height: 60vh !important;
+    .envira-gallery-item {
+      height: 100% !important;
+      padding: 0 !important;
+      .envira-gallery-item-inner {
+        height: 100% !important;
+        width: 100% !important;
+        position: relative !important;
+        top: 0!important;
+        left: 0 !important;
+      }
+    }
+    .envira-gallery-image {
+      display: block;
+      height: 100% !important;
+      left: 0;
+      margin: 0 !important;
+      object-fit: cover;
+      object-position: 50% 50%;
+      // position: relative !important;
+      top: 0;
+      width: 100% !important;
+    }
     .gallery-item { 
       object-fit: cover;
       object-position: 50% 50%;
-      img {
-        display: block;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-        width: 100%;
-      }
+      
     }
-    .gallery-item:nth-of-type(4) {
+    .envira-gallery-item:nth-of-type(4) {
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 1;
@@ -454,10 +471,11 @@ html,.body { margin: 0 auto; }
       padding: .25em 0.45em;
       width: 100%;
       &::placeholder {
-        color: $color-white;
+        color: rgba(255, 255, 255, 0.6);
       }
       &:focus {
-        border: 1px solid $color-secondary;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid $color-white;
       }
     }
     input[type="submit"] {
