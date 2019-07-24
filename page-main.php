@@ -220,39 +220,34 @@ get_header();
         <div class="container">
           <h1>Upcoming Appearances</h1>
           <div class="appearances-container">
-            <div class="appearance-container">
-              <div class="appearance-date">
-                <span>25</span>JUN
+            <?php
+              $appearances_loop = new WP_Query( array(
+                'post_type'   => 'upcoming_appearances',
+                'orderby'     => 'post_id',
+                'order'       => 'DESC',
+                'posts_per_page' => '4'
+              ));
+              while($appearances_loop->have_posts()) : $appearances_loop->the_post();
+             
+              
+            ?>
+              <div class="appearance-container">
+                <div class="appearance-date">
+                  <?php 
+                    $date = get_field('appearance_date', false, false); 
+                    $date = new DateTime($date);
+                  ?>
+                  <span><?php echo $date->format('j'); ?></span><?php echo $date->format('M'); ?>
+                </div>
+                <div class="appearance-name">
+                  <?php the_title(); ?>
+                </div>
+                <div class="appearance-cta">
+                  <a href="<?php the_field('appearance_link'); ?>" class="btn btn-secondary">Learn More</a>
+                </div>
               </div>
-              <div class="appearance-name">
-                Appearance Name Goes Here
-              </div>
-              <div class="appearance-cta">
-                <button class="btn btn-secondary">Learn More</button>
-              </div>
-            </div>
-            <div class="appearance-container">
-              <div class="appearance-date">
-                <span>25</span>JUN
-              </div>
-              <div class="appearance-name">
-                Appearance Name Goes Here
-              </div>
-              <div class="appearance-cta">
-                <button class="btn btn-secondary">Learn More</button>
-              </div>
-            </div>
-            <div class="appearance-container">
-              <div class="appearance-date">
-                <span>25</span>JUN
-              </div>
-              <div class="appearance-name">
-                Appearance Name Goes Here
-              </div>
-              <div class="appearance-cta">
-                <button class="btn btn-secondary">Learn More</button>
-              </div>
-            </div>
+            <?php endwhile; ?>
+
           </div>
         </div>
       </section><!--UPCOMING END -->

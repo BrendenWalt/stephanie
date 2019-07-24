@@ -1124,6 +1124,9 @@ html, .body {
 #upcoming-appearances .appearance-container div {
   display: inline-block;
 }
+#upcoming-appearances .appearance-date {
+  text-transform: uppercase;
+}
 #upcoming-appearances .appearance-date span {
   font-size: 2.25em;
   font-weight: bold;

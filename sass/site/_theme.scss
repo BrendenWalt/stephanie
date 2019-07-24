@@ -391,9 +391,12 @@ html,.body { margin: 0 auto; }
       display: inline-block;
     }
   }
-  .appearance-date span{
+  .appearance-date {
+    text-transform: uppercase;
+    span{
     font-size: 2.25em;
     font-weight: bold;
+    }
   }
   .appearance-name {
     font-size: 2em;
