@@ -12,6 +12,14 @@ $instagram_url                           = get_field('instagram_url');
 $facebook_url                            = get_field('facebook_url');
 $youtube_url                             = get_field('youtube_url');
 
+// GALLERY
+$gallery_shortcode                       = get_field('gallery_shortcode');
+
+// ABOUT
+$about_header                            = get_field('about_header');
+$about_text                              = get_field('about_text');
+$about_image                             = get_field('about_image');
+
 get_header();
 ?>
 
@@ -57,7 +65,8 @@ get_header();
         <div class="container">
           <div class="gallery">
           <?php
-            if ( function_exists( 'envira_gallery' ) ) { envira_gallery( 'home-page-gallery', 'slug' ); }
+            // if ( function_exists( 'envira_gallery' ) ) { envira_gallery( 'home-page-gallery', 'slug' ); }
+            echo do_shortcode($gallery_shortcode);
           ?>
             <!-- <div class="gallery-item">
               <img src="https://placekitten.com/500/250" alt="">
@@ -94,12 +103,18 @@ get_header();
       <section id="about">
         <div class="container">
           <div class="about-text-container">
-            <h1>About Me</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia doloribus, reprehenderit, eveniet voluptatum eaque necessitatibus illum nihil placeat rerum voluptates consequatur qui ratione. Ad voluptates deleniti voluptate pariatur, error hic nihil nesciunt esse doloremque, sequi in alias quod?</p>
-            <button class="btn btn-primary">Contact Me</button>
+            <h1>
+              <?php echo($about_header); ?>
+            </h1>
+            <div>
+              <?php echo($about_text); ?>
+            </div>
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
           </div>
           <div class="about-img">
-            <img src="https://placekitten.com/600/600" alt="">
+            <?php if(!empty($about_image)): ?>
+              <img src="<?php echo($about_image['url']); ?>" alt="<?php echo($about_image['alt']); ?>">
+            <?php endif; ?>
           </div>
         </div>
       </section><!-- ABOUT END-->

@@ -770,6 +770,9 @@ html, .body {
   background-color: #0197de;
   color: #fff;
 }
+.btn-primary:visited {
+  color: #fff;
+}
 .btn-secondary {
   background-color: #fff;
   color: #0197de;
@@ -911,7 +914,7 @@ html, .body {
   grid-gap: 10px;
   grid-template: repeat(3, 1fr) / 1fr 1fr 1fr;
   margin-bottom: 0;
-  height: 60vh !important;
+  height: 70vh !important;
 }
 #gallery .envira-gallery-public .envira-gallery-item {
   height: 100% !important;
@@ -999,17 +1002,29 @@ html, .body {
   padding: 1.5em 0 0;
 }
 #resume h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.25em;
+  letter-spacing: 0.025em;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
 }
-#resume h3 {
-  text-transform: uppercase;
+#resume h2 {
+  font-family: 'Oswald', sans-serif;
   font-size: 1.5em;
+  letter-spacing: 0.025em;
+}
+#resume h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
   font-weight: 800;
 }
 #resume h4 {
   color: #0197de;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 1.45em;
 }
 #resume .resume-container {
   background-color: #fff;
