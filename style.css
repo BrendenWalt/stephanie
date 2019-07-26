@@ -756,6 +756,10 @@ embed, iframe, object {
 html, .body {
   margin: 0 auto;
 }
+h1 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
 .btn {
   border-radius: 0;
   border: 0;
@@ -883,7 +887,7 @@ html, .body {
   color: #fff;
   text-transform: uppercase;
   line-height: 0.8em;
-  font-size: 7em;
+  font-size: 9em;
   margin: 0;
 }
 .hero-body .hero-site-info h3 {
@@ -997,6 +1001,12 @@ html, .body {
   margin-bottom: 0.25em;
   margin-top: 0;
 }
+#about .about-text-container p {
+  text-align: justify;
+}
+#about .btn-primary {
+  display: inline-block;
+}
 #resume {
   background-color: #f6f6f6;
   padding: 1.5em 0 0;
@@ -1054,6 +1064,12 @@ html, .body {
   max-width: 100%;
   width: 65%;
   border-bottom: 5px solid #ff0090;
+}
+#resume .resume-details-container .education-item {
+  margin: 1em 0;
+}
+#resume .resume-details-container .education-item:first-of-type {
+  margin-top: 0;
 }
 #resume .resume-details-container .education-title {
   text-transform: uppercase;
@@ -1201,6 +1217,11 @@ html, .body {
   text-align: center;
   margin: 0;
 }
+#contact h3 {
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
 #contact .contact-form form p {
   margin: 0.25em auto;
 }
@@ -1224,14 +1245,18 @@ html, .body {
 }
 #contact .contact-form form input[type="submit"] {
   background-color: #fff;
+  border: 1px solid #fff;
   color: #0197de;
   font-weight: bold;
-  padding: 1em 3em;
+  padding: 1em 6em;
   width: auto;
-  float: right;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
 }
 #contact .contact-form form input[type="submit"]:hover {
   cursor: pointer;
+  color: #fff;
+  background-color: transparent;
 }
 #contact .contact-header {
   text-align: center;
@@ -1239,8 +1264,8 @@ html, .body {
 }
 #contact .contact-info-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
+  grid-template-columns: 1fr minmax(500px, 1fr);
+  grid-gap: 10em;
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;

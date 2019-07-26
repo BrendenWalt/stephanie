@@ -65,31 +65,8 @@ get_header();
         <div class="container">
           <div class="gallery">
           <?php
-            // if ( function_exists( 'envira_gallery' ) ) { envira_gallery( 'home-page-gallery', 'slug' ); }
             echo do_shortcode($gallery_shortcode);
           ?>
-            <!-- <div class="gallery-item">
-              <img src="https://placekitten.com/500/250" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/500/250" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/500/250" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/550/700" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/500/250" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/500/250" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="https://placekitten.com/500/250" alt="">
-            </div> -->
-            
           </div>
           <div class="gallery-cta"> 
             <button class="btn btn-primary">Gallery</button>
@@ -106,9 +83,9 @@ get_header();
             <h1>
               <?php echo($about_header); ?>
             </h1>
-            <div>
+            <p>
               <?php echo($about_text); ?>
-            </div>
+            </p>
             <a href="#contact" class="btn btn-primary">Contact Me</a>
           </div>
           <div class="about-img">
@@ -190,10 +167,20 @@ get_header();
             <div class="resume-container">
               <h2>Education</h2>
               <div class="education-list">
+                <?php
+                  $education_loop = new WP_Query(array(
+                    'post_type' => 'resume_education',
+                    'orderby'   => 'post_id',
+                    'order'     => 'DESC'
+                  ));
+
+                  while($education_loop->have_posts()) : $education_loop->the_post()
+                ?>
                 <div class="education-item">
-                  <div class="education-title">Name of Degree Here</div>
-                  <div class="education-detail">Name of School | 2012</div>
+                  <div class="education-title"><?php echo get_field('name_of_degree'); ?></div>
+                  <div class="education-detail"><?php echo get_field('name_of_school');?> | <?php echo get_field('graduation_year'); ?></div>
                 </div>
+                <?php endwhile; ?>
               </div>
             </div>
           </div>
