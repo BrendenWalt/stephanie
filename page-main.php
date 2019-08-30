@@ -55,7 +55,6 @@ get_header();
               
               <h3><?php echo(get_bloginfo('description')) ?></h3>
             </div>
-            <div class="hero-bg"></div>
           </div>
         </div>
       </section><!-- HOME END -->

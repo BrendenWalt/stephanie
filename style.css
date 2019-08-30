@@ -852,12 +852,6 @@ h1 {
   width: 100%;
   z-index: 1;
 }
-.hero-body .hero-bg {
-  position: absolute;
-  height: 60vw;
-  width: 100%;
-  z-index: -1;
-}
 .hero-body #hero-headshot {
   max-width: 1200px;
   width: 100%;
@@ -901,11 +895,11 @@ h1 {
   font-size: 1.5em;
   margin-left: 0em;
 }
-@media (min-width: 481px) {
+@media only screen and (min-width: 481px) {
   .hero-body .container {
     flex-direction: row;
   }
-  .hero-body .hero-headshot {
+  .hero-body #hero-headshot {
     width: 45%;
   }
   .hero-body .hero-site-info h1 {
@@ -1012,7 +1006,7 @@ h1 {
 #about .about-img {
   justify-self: flex-end;
   width: 50%;
-  max-width: 470px;
+  max-width: 500px;
 }
 #about .about-img img {
   display: block;
@@ -1032,6 +1026,13 @@ h1 {
   display: inline-block;
 }
 @media (min-width: 481px) {
+  #about {
+    padding: 4em 0;
+  }
+  #about:after {
+    top: 17%;
+    height: 66%;
+  }
   #about .container {
     flex-direction: row;
   }
@@ -1246,11 +1247,12 @@ h1 {
   font-size: 2.5em;
   text-align: center;
 }
-@media (min-width: 481px) {
+@media screen and (min-width: 481px) {
   #follow-on-instagram .gallery-grid {
     padding: 0;
   }
-  #follow-on-instagram #sbi_items {
+  #follow-on-instagram #sbi_images {
+    grid-auto-flow: dense;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 50vh;
@@ -1258,6 +1260,15 @@ h1 {
   #follow-on-instagram .sbi_item:nth-child(1), #follow-on-instagram .sbi_item:nth-child(6) {
     grid-column-end: span 2;
     grid-row-end: span 2;
+  }
+  #follow-on-instagram .sbi_item:nth-child(2) {
+    grid-column-start: 1;
+  }
+  #follow-on-instagram .sbi_item:nth-child(3) {
+    grid-column-start: 2;
+  }
+  #follow-on-instagram .sbi_item:nth-child(6) {
+    grid-column-start: 3;
   }
 }
 #contact {
