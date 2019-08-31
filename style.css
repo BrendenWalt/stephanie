@@ -813,6 +813,7 @@ h1 {
 .menu-container .navbar {
   background-color: transparent;
   width: 90%;
+  transition: transform 0.3s ease;
   z-index: 1;
 }
 .menu-container .navbar ul {
@@ -836,6 +837,9 @@ h1 {
 }
 .menu-container .navbar li a:hover {
   color: #0197de;
+}
+.menu-container .navbar.closed {
+  transform: translateX(60vw);
 }
 @media (min-width: 481px) {
   .menu-container .navbar {

@@ -153,15 +153,7 @@ get_header();
                 </div>
               </div>
             </div>
-            <!-- Special Skills -->
-            <div class="resume-container">
-              <h2>Special Skills</h2>
-              <div class="skills-list">
-                <div class="skills-item">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae esse odit dolorum accusamus consequuntur quidem fuga voluptate nulla assumenda. Dolorum!
-                </div>
-              </div>
-            </div>
+           
             <!-- Education -->
             <div class="resume-container">
               <h2>Education</h2>
@@ -180,6 +172,16 @@ get_header();
                   <div class="education-detail"><?php echo get_field('name_of_school');?> | <?php echo get_field('graduation_year'); ?></div>
                 </div>
                 <?php endwhile; ?>
+              </div>
+            </div>
+
+             <!-- Special Skills -->
+             <div class="resume-container">
+              <h2>Special Skills</h2>
+              <div class="skills-list">
+                <div class="skills-item">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae esse odit dolorum accusamus consequuntur quidem fuga voluptate nulla assumenda. Dolorum!
+                </div>
               </div>
             </div>
           </div>

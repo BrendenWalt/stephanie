@@ -58,6 +58,7 @@ h1 {
   .navbar {
     background-color: transparent;
     width: 90%;
+    transition: transform 0.3s ease;
     z-index: 1;
     ul {
       align-items: center;
@@ -81,6 +82,9 @@ h1 {
           color: $color__link-hover;
         }
       }
+    }
+    &.closed {
+      transform: translateX(60vw);
     }
     @media (min-width: 481px) {
       display: flex;

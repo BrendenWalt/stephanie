@@ -1,11 +1,12 @@
 window.onload = function() {
-
+  
   const hamburger = document.querySelector('.ham-container');
   const navLinks = document.querySelector('.navbar');
+  const navLink = navLinks.querySelectorAll('li');
 
-  function hamClick(e) {
+
+  function onHamClick(e) {
     e.preventDefault();
-    console.log(navLinks.classList)
     if(navLinks.classList.contains('closed')) {
       navLinks.classList.remove('closed');
     } else {
@@ -13,6 +14,17 @@ window.onload = function() {
     }
   }
 
-  hamburger.addEventListener('click', hamClick);
+  function onNavLinkClick(e) {
+    e.preventDefault();
+    const link = e.path[0].hash;
+    document.querySelector(link).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 
+  hamburger.addEventListener('click', onHamClick);
+  for( var i = 0; i < navLink.length; i++) {
+    console.log(navLink[i]);
+    navLink[i].addEventListener('click', onNavLinkClick);
+  }
 } 
