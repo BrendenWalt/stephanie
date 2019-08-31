@@ -33,14 +33,21 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'stephanie-vanalstine' ); ?></a>
 
 	<header>
-		<?php 
-			wp_nav_menu( array(
-				'theme_location'	=> 'primary',
-				'container'				=> 'nav',
-				'container_class'	=> 'navbar-collapse navbar',
-				'menu_class'			=> 'nav navbar-nav navbar-right'
-			))
-		?>
+		<div class="menu-container">
+			
+			<?php 
+				wp_nav_menu( array(
+					'theme_location'	=> 'primary',
+					'container'				=> 'nav',
+					'container_class'	=> 'navbar-collapse navbar',
+					'menu_class'			=> 'nav navbar-nav navbar-right closed'
+				))
+			?>
+			<div class="ham-container">
+				x
+			</div>
+		</div>
+		
 	</header>
 
 	<div id="content" class="site-content">
