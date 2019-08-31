@@ -39,8 +39,8 @@
 				wp_nav_menu( array(
 					'theme_location'	=> 'primary',
 					'container'				=> 'nav',
-					'container_class'	=> 'navbar-collapse navbar',
-					'menu_class'			=> 'nav navbar-nav navbar-right closed'
+					'container_class'	=> 'navbar-collapse navbar closed',
+					'menu_class'			=> 'nav navbar-nav navbar-right'
 				))
 			?>
 			<div class="ham-container">
