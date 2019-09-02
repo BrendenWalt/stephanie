@@ -7,6 +7,7 @@ window.onload = function() {
 
   function onHamClick(e) {
     e.preventDefault();
+    $(this).toggleClass('open');
     if(navLinks.classList.contains('closed')) {
       navLinks.classList.remove('closed');
     } else {
@@ -23,8 +24,9 @@ window.onload = function() {
   }
 
   hamburger.addEventListener('click', onHamClick);
+  
   for( var i = 0; i < navLink.length; i++) {
-    console.log(navLink[i]);
     navLink[i].addEventListener('click', onNavLinkClick);
   }
+
 } 

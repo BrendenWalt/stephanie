@@ -43,8 +43,11 @@
 					'menu_class'			=> 'nav navbar-nav navbar-right'
 				))
 			?>
-			<div class="ham-container">
-				x
+			<div id="nav-icon3" class="ham-container">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 		</div>
 		
