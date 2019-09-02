@@ -20,6 +20,10 @@ $about_header                            = get_field('about_header');
 $about_text                              = get_field('about_text');
 $about_image                             = get_field('about_image');
 
+// RESUME
+$special_skills                          = get_field('special_skills');
+$download_resume_link                    = get_field('download_resume_link');
+
 get_header();
 ?>
 
@@ -180,7 +184,7 @@ get_header();
               <h2>Special Skills</h2>
               <div class="skills-list">
                 <div class="skills-item">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae esse odit dolorum accusamus consequuntur quidem fuga voluptate nulla assumenda. Dolorum!
+                  <?php echo $special_skills; ?>
                 </div>
               </div>
             </div>
@@ -194,7 +198,7 @@ get_header();
             <h3>Download Full Resume</h3>
           </div>
           <div class="btn">
-            <button class="btn btn-secondary">Download</button>
+            <a href="<?php echo($download_resume_link); ?>" class="btn btn-secondary">Download</a>
           </div>
           
           
@@ -232,8 +236,6 @@ get_header();
               ));
               if($appearances_loop->have_posts()) {
               while($appearances_loop->have_posts()) : $appearances_loop->the_post();
-             
-              
             ?>
               <div class="appearance-container">
                 <div class="appearance-date">
@@ -333,6 +335,12 @@ get_header();
         
         </div>
       </section><!-- CONTACT END -->
+
+      <div id="scroll-to-top">
+        <button>
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </div>
 
       <!-- Social -->
       <aside id="social-menu">
