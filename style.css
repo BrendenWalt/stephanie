@@ -1277,8 +1277,11 @@ h1 {
   width: 100%;
   box-shadow: -7px -6px 0 0 #ff0090;
 }
-#upcoming-appearances .appearance-container div {
+#upcoming-appearances .appearance-container > div {
   display: inline-block;
+}
+#upcoming-appearances .appearance-cta {
+  white-space: nowrap;
 }
 #upcoming-appearances .appearance-date {
   text-transform: uppercase;
@@ -1287,9 +1290,18 @@ h1 {
   font-size: 2.25em;
   font-weight: bold;
 }
+#upcoming-appearances .appearance-details {
+  font-weight: 300;
+  text-align: center;
+}
 #upcoming-appearances .appearance-name {
   font-size: 2em;
   font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+}
+#upcoming-appearances .appearance-text-container {
+  padding: 0 1em;
 }
 @media (min-width: 481px) {
   #upcoming-appearances .appearance-container {

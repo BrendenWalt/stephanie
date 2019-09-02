@@ -554,9 +554,12 @@ h1 {
     position: relative;
     width: 100%;
     box-shadow: -7px -6px 0 0 $color-secondary;
-    div {
+     > div {
       display: inline-block;
     }
+  }
+  .appearance-cta {
+    white-space: nowrap;
   }
   .appearance-date {
     text-transform: uppercase;
@@ -565,10 +568,20 @@ h1 {
     font-weight: bold;
     }
   }
+  .appearance-details {
+    font-weight: 300;
+    text-align: center;
+  }
   .appearance-name {
     font-size: 2em;
     font-weight: 300;
+    line-height: 1em;
+    text-align: center;
   }
+  .appearance-text-container {
+    padding: 0 1em;
+  }
+  
   @media (min-width: 481px) {
     .appearance-container {
       flex-direction: row;

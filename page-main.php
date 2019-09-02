@@ -230,6 +230,7 @@ get_header();
                 'order'       => 'DESC',
                 'posts_per_page' => '4'
               ));
+              if($appearances_loop->have_posts()) {
               while($appearances_loop->have_posts()) : $appearances_loop->the_post();
              
               
@@ -242,14 +243,36 @@ get_header();
                   ?>
                   <span><?php echo $date->format('j'); ?></span><?php echo $date->format('M'); ?>
                 </div>
-                <div class="appearance-name">
-                  <?php the_title(); ?>
-                </div>
+                <div class="appearance-text-container">
+                  <div class="appearance-name">
+                    <?php the_title(); ?>
+                  </div>
+                  <div class="appearance-details">
+                    <?php if(!empty(get_field('appearance_details'))) :
+                       echo get_field('appearance_details');
+                    endif; ?>
+                  </div>
+                </div> 
+                
                 <div class="appearance-cta">
                   <a href="<?php the_field('appearance_link'); ?>" class="btn btn-secondary">Learn More</a>
                 </div>
               </div>
-            <?php endwhile; ?>
+            <?php 
+              endwhile; 
+            } else {
+            ?>
+              <div class="appearance-container">
+                <div class="appearance-date">
+                </div>
+                <div class="appearance-name">
+                  Check Back Soon for upcoming shows!
+                </div>
+                <div class="appearance-cta">
+                </div>
+              </div>
+
+            <?php } ?>
 
           </div>
         </div>
