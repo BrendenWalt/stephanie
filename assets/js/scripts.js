@@ -1,6 +1,7 @@
 window.onload = function() {
   
   const hamburger = document.querySelector('.ham-container');
+  const menu = document.querySelector('.menu-container');
   const navLinks = document.querySelector('.navbar');
   const navLink = navLinks.querySelectorAll('li');
   const scrollTop = document.querySelector('#scroll-to-top');
@@ -36,8 +37,10 @@ window.onload = function() {
     console.log(window.pageYOffset);
     if(window.pageYOffset > 600) {
       scrollTop.classList.add('active');
+      menu.classList.add('overlay');
     } else {
       scrollTop.classList.remove('active');
+     menu.classList.remove('overlay');
     }
   }
 

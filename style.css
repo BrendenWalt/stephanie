@@ -796,6 +796,7 @@ h1 {
 }
 .menu-container {
   z-index: 3;
+  transition: top 450ms ease, width 450ms ease, background-color 450ms ease;
 }
 .menu-container .ham-container {
   align-items: center;
@@ -871,6 +872,15 @@ h1 {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+.menu-container.overlay {
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 4px solid #ff0090;
+}
+.menu-container.overlay .navbar {
+  min-height: 4.25rem;
 }
 .menu-container .navbar {
   background-color: transparent;
