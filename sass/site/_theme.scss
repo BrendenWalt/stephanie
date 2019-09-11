@@ -169,14 +169,13 @@ h1 {
     right: 0;
     width: 55%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     .navbar,
     .ham-container {
       
     }
   }
 }
-
 
 // Hero 
 .hero-body {
@@ -770,6 +769,8 @@ h1 {
 // SCROLL TO TOP BUTTON
 #scroll-to-top {
   z-index: 5;
+  transition: all 450ms ease;
+  opacity: 0;
   button {
     border: none;
     border-radius: 50%;
@@ -787,5 +788,7 @@ h1 {
       cursor:pointer;
     }
   }
-  
+  &.active {
+    opacity: 1;
+  }
 }

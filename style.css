@@ -916,7 +916,7 @@ h1 {
     right: 0;
     width: 55%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
   }
 }
 .hero-body {
@@ -1474,6 +1474,8 @@ h1 {
 }
 #scroll-to-top {
   z-index: 5;
+  transition: all 450ms ease;
+  opacity: 0;
 }
 #scroll-to-top button {
   border: none;
@@ -1491,4 +1493,7 @@ h1 {
 }
 #scroll-to-top button:hover {
   cursor: pointer;
+}
+#scroll-to-top.active {
+  opacity: 1;
 }
