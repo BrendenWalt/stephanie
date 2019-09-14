@@ -28,10 +28,6 @@ h1 {
   background-color: $color-white;
   color: $color-primary;
 }
-section {
-  padding-left: 2%;
-  padding-right: 2%;
-}
 .social-menu-item {
   display: inline-block;
   text-align: center;
@@ -367,14 +363,14 @@ section {
 
 // About
 #about {
-  padding: 5em 0;
+  padding: 4em 0 3em;
   position: relative;
   &:after {
     content: "";
     background-color: $color-secondary;
     position: absolute;
-    top: 19%;
-    height: 62%;
+    bottom: 0;
+    height: 75%;
     width: 100%;
   }
   .container {
@@ -383,6 +379,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 0 4%;
   }
   .about-text-container,
   .about-img {
@@ -391,7 +388,7 @@ section {
   }
   .about-img {
     justify-self: flex-end;
-    width: 50%;
+    width: 100%;
     max-width: 500px;
   }
   .about-img img {
@@ -399,7 +396,9 @@ section {
   }
   .about-text-container {
     color: #ffffff;
-    width: 50%;
+    margin-top: 1.5em;
+    text-align: center;
+    width: 85%;
     h1 {
       margin-bottom: 0.25em;
       margin-top: 0;
@@ -411,14 +410,23 @@ section {
   .btn-primary {
     display: inline-block;
   }
-  @media (min-width: 481px) {
+  @media (min-width: $screen_med) {
     padding: 4em 0;
     &:after {
       top: 17%;
       height: 66%;
     }
     .container {
-      flex-direction: row;
+      flex-direction: row-reverse;
+      padding: 0;
+    }
+    .about-text-container {
+      text-align: left;
+      margin-top: 0;
+    }
+    .about-text-container,
+    .about-img {
+      width: 50%
     }
   }
 }
@@ -464,7 +472,7 @@ section {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr;
-    margin: 1em auto 3em;
+    margin: 1em 3% 1em;
     h2 {
       color: $color-primary;
       display: inline-block;
@@ -509,7 +517,7 @@ section {
       font-weight: 300;
       font-size: 1em;
     }
-    @media (min-width: 481px) {
+    @media (min-width: $screen_med) {
       grid-template-columns: 1.5fr 1fr;
     }
   }
@@ -528,26 +536,37 @@ section {
       margin: 0 auto;
     }
   }
+  @media screen and (min-width: $screen_med) {
+    .resume-details-container {
+      margin: 1em auto 3em;
+    }
+  }
 }
 
 // Videos
 #videos {
-  padding: 4em 0;
+  padding: 2.5em 4%;
   .video-grid {
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
   }
   .video-item {
     height: 100%;
-    &:nth-of-type(1) {
-      grid-row: span 2;
-    }
   }
   .video-item img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+  @media screen and (min-width: $screen_med) {
+    padding: 4em 4%;
+    .video-grid {
+      grid-template-columns: 2fr 1fr;
+    }
+    .video-item:nth-of-type(1) {
+      grid-row: span 2;
+    }
   }
 }
 
@@ -585,8 +604,13 @@ section {
   .appearance-cta {
     white-space: nowrap;
   }
+  .appearance-cta a {
+    margin-top: 1em;
+    display: block;
+  }
   .appearance-date {
     text-transform: uppercase;
+    line-height: 1.25em;
     span{
     font-size: 2.25em;
     font-weight: bold;
@@ -600,16 +624,23 @@ section {
     font-size: 2em;
     font-weight: 300;
     line-height: 1em;
+    padding: 1rem 0 0.75rem;
     text-align: center;
   }
   .appearance-text-container {
     padding: 0 1em;
   }
   
-  @media (min-width: 481px) {
+  @media (min-width: $screen_med) {
     .appearance-container {
       flex-direction: row;
       padding: 2em;
+    }
+    .appearance-cta a {
+      margin-top: 0;
+    }
+    .appearance-name {
+      padding: 0rem 0 0.5rem;
     }
   }
 }
@@ -774,9 +805,9 @@ section {
   }
 }
 
-
 // SOCIAL MEDIA SIDEBAR
 #social-menu {
+  display: none;
   position: fixed;
   right: 0;
   top: 50%;
@@ -791,6 +822,9 @@ section {
     .social-menu-item {
       display: block;
     }
+  }
+  @media screen and (min-width: $screen_sm) {
+    display: block;
   }
 }
 

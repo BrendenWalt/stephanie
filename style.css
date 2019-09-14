@@ -1092,14 +1092,14 @@ section {
   text-align: center;
 }
 #about {
-  padding: 5em 0;
+  padding: 4em 0 2em;
   position: relative;
 }
 #about:after {
   content: "";
   background-color: #ff0090;
   position: absolute;
-  top: 19%;
+  bottom: 0;
   height: 62%;
   width: 100%;
 }
@@ -1109,6 +1109,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 0 4%;
 }
 #about .about-text-container, #about .about-img {
   background-color: transparent;
@@ -1116,7 +1117,7 @@ section {
 }
 #about .about-img {
   justify-self: flex-end;
-  width: 50%;
+  width: 100%;
   max-width: 500px;
 }
 #about .about-img img {
@@ -1124,7 +1125,9 @@ section {
 }
 #about .about-text-container {
   color: #fff;
-  width: 50%;
+  margin-top: 1.5em;
+  text-align: center;
+  width: 85%;
 }
 #about .about-text-container h1 {
   margin-bottom: 0.25em;
@@ -1136,7 +1139,7 @@ section {
 #about .btn-primary {
   display: inline-block;
 }
-@media (min-width: 481px) {
+@media (min-width: 787px) {
   #about {
     padding: 4em 0;
   }
@@ -1145,7 +1148,15 @@ section {
     height: 66%;
   }
   #about .container {
-    flex-direction: row;
+    flex-direction: row-reverse;
+    padding: 0;
+  }
+  #about .about-text-container {
+    text-align: left;
+    margin-top: 0;
+  }
+  #about .about-text-container, #about .about-img {
+    width: 50%;
   }
 }
 #resume {
@@ -1189,7 +1200,7 @@ section {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr;
-  margin: 1em auto 3em;
+  margin: 1em 3% 1em;
 }
 #resume .resume-details-container h2 {
   color: #0197de;
@@ -1232,7 +1243,7 @@ section {
   font-weight: 300;
   font-size: 1em;
 }
-@media (min-width: 481px) {
+@media (min-width: 787px) {
   #resume .resume-details-container {
     grid-template-columns: 1.5fr 1fr;
   }
@@ -1252,24 +1263,37 @@ section {
   display: inline-block;
   margin: 0 auto;
 }
+@media screen and (min-width: 787px) {
+  #resume .resume-details-container {
+    margin: 1em auto 3em;
+  }
+}
 #videos {
-  padding: 4em 0;
+  padding: 2.5em 4%;
 }
 #videos .video-grid {
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
 }
 #videos .video-item {
   height: 100%;
-}
-#videos .video-item:nth-of-type(1) {
-  grid-row: span 2;
 }
 #videos .video-item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media screen and (min-width: 787px) {
+  #videos {
+    padding: 4em 4%;
+  }
+  #videos .video-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+  #videos .video-item:nth-of-type(1) {
+    grid-row: span 2;
+  }
 }
 #upcoming-appearances {
   background-color: #f6f6f6;
@@ -1305,8 +1329,13 @@ section {
 #upcoming-appearances .appearance-cta {
   white-space: nowrap;
 }
+#upcoming-appearances .appearance-cta a {
+  margin-top: 1em;
+  display: block;
+}
 #upcoming-appearances .appearance-date {
   text-transform: uppercase;
+  line-height: 1.25em;
 }
 #upcoming-appearances .appearance-date span {
   font-size: 2.25em;
@@ -1320,15 +1349,22 @@ section {
   font-size: 2em;
   font-weight: 300;
   line-height: 1em;
+  padding: 1rem 0 0.75rem;
   text-align: center;
 }
 #upcoming-appearances .appearance-text-container {
   padding: 0 1em;
 }
-@media (min-width: 481px) {
+@media (min-width: 787px) {
   #upcoming-appearances .appearance-container {
     flex-direction: row;
     padding: 2em;
+  }
+  #upcoming-appearances .appearance-cta a {
+    margin-top: 0;
+  }
+  #upcoming-appearances .appearance-name {
+    padding: 0rem 0 0.5rem;
   }
 }
 #follow-on-instagram {
@@ -1484,6 +1520,7 @@ section {
   }
 }
 #social-menu {
+  display: none;
   position: fixed;
   right: 0;
   top: 50%;
@@ -1499,6 +1536,11 @@ section {
 }
 #social-menu .social-menu .social-menu-item {
   display: block;
+}
+@media screen and (min-width: 481px) {
+  #social-menu {
+    display: block;
+  }
 }
 #scroll-to-top {
   z-index: 5;

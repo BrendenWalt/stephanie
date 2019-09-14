@@ -82,6 +82,12 @@ get_header();
       <!-- About -->
       <section id="about">
         <div class="container">
+          
+          <div class="about-img">
+            <?php if(!empty($about_image)): ?>
+              <img src="<?php echo($about_image['url']); ?>" alt="<?php echo($about_image['alt']); ?>">
+            <?php endif; ?>
+          </div>
           <div class="about-text-container">
             <h1>
               <?php echo($about_header); ?>
@@ -90,11 +96,6 @@ get_header();
               <?php echo($about_text); ?>
             </p>
             <a href="#contact" class="btn btn-primary">Contact Me</a>
-          </div>
-          <div class="about-img">
-            <?php if(!empty($about_image)): ?>
-              <img src="<?php echo($about_image['url']); ?>" alt="<?php echo($about_image['alt']); ?>">
-            <?php endif; ?>
           </div>
         </div>
       </section><!-- ABOUT END-->
