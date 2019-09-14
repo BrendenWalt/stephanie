@@ -784,6 +784,10 @@ h1 {
   background-color: #fff;
   color: #0197de;
 }
+section {
+  padding-left: 2%;
+  padding-right: 2%;
+}
 .social-menu-item {
   display: inline-block;
   text-align: center;
@@ -794,22 +798,26 @@ h1 {
   display: inline-block;
   font-size: 1.5rem;
 }
+@media only screen and (min-width: 787px) {
+  section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .menu-container {
   z-index: 3;
   transition: top 450ms ease, width 450ms ease, background-color 450ms ease;
 }
 .menu-container .ham-container {
   align-items: center;
-  color: #fff;
+  color: #0197de;
   display: flex;
   height: 60px;
   justify-content: center;
   z-index: 2;
-  background-color: #0197de;
-  width: 60px;
-  border-radius: 50%;
   text-align: center;
   vertical-align: middle;
+  width: 60px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -829,7 +837,7 @@ h1 {
   position: absolute;
   height: 3px;
   width: 50%;
-  background: #fff;
+  background: #0197de;
   border-radius: 9px;
   opacity: 1;
   left: 15px;
@@ -843,13 +851,13 @@ h1 {
   transition: 0.25s ease-in-out;
 }
 .menu-container .ham-container span:nth-child(1) {
-  top: 20px;
+  top: 10px;
 }
 .menu-container .ham-container span:nth-child(2), .menu-container .ham-container span:nth-child(3) {
-  top: 29px;
+  top: 19px;
 }
 .menu-container .ham-container span:nth-child(4) {
-  top: 38px;
+  top: 28px;
 }
 .menu-container .ham-container.open span:nth-child(1) {
   top: 18px;
@@ -887,6 +895,7 @@ h1 {
   width: 90%;
   transition: transform 0.3s ease;
   z-index: 1;
+  display: none;
 }
 .menu-container .navbar ul {
   align-items: center;
@@ -1323,7 +1332,7 @@ h1 {
   }
 }
 #follow-on-instagram {
-  padding: 3em 0;
+  padding: 1.5em 5%;
 }
 #follow-on-instagram .container {
   background-color: #f6f6f6;
@@ -1347,10 +1356,10 @@ h1 {
   width: 100%;
   margin: 0 auto;
   max-width: 1075px !important;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 5px;
-  height: 50vh;
+  height: 140vh;
 }
 #follow-on-instagram .social-menu-item {
   display: block;
@@ -1361,7 +1370,10 @@ h1 {
   font-size: 2.5em;
   text-align: center;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 787px) {
+  #follow-on-instagram {
+    padding: 3rem 0;
+  }
   #follow-on-instagram .gallery-grid {
     padding: 0;
   }
@@ -1388,7 +1400,7 @@ h1 {
 #contact {
   background-color: #0197de;
   color: #fff;
-  padding: 4em 0;
+  padding: 1.5em 5%;
 }
 #contact h1 {
   color: #fff;
@@ -1444,7 +1456,7 @@ h1 {
 #contact .contact-info-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 10em;
+  grid-gap: 1em;
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
@@ -1453,9 +1465,10 @@ h1 {
 #contact .contact-info-container > div {
   width: 100%;
 }
-@media (min-width: 481px) {
+@media (min-width: 1000px) {
   #contact .contact-info-container {
     grid-template-columns: 1fr minmax(500px, 1fr);
+    grid-gap: 10em;
   }
 }
 #contact .social-container {
@@ -1464,6 +1477,11 @@ h1 {
 }
 #contact .social-container i {
   padding: 0 0.5em;
+}
+@media screen and (min-width: 1000px) {
+  #contact {
+    padding: 4em 5%;
+  }
 }
 #social-menu {
   position: fixed;
@@ -1495,6 +1513,7 @@ h1 {
   width: 60px;
   background-color: #0197de;
   font-size: 2em;
+  outline: 0;
   padding: 0;
   position: fixed;
   bottom: 1vw;

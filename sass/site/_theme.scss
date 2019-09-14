@@ -28,6 +28,10 @@ h1 {
   background-color: $color-white;
   color: $color-primary;
 }
+section {
+  padding-left: 2%;
+  padding-right: 2%;
+}
 .social-menu-item {
   display: inline-block;
   text-align: center;
@@ -36,6 +40,13 @@ h1 {
     color: $color-white;
     display: inline-block;
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 787px) {
+  section {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -48,16 +59,14 @@ h1 {
     background-color 450ms ease;
   .ham-container {
     align-items: center;
-    color: #ffffff;
+    color: $color-primary;
     display: flex;
     height: 60px;
     justify-content: center;
     z-index: 2;
-    background-color: $color-primary;
-    width: 60px;
-    border-radius: 50%;
     text-align: center;
     vertical-align: middle;
+    width: 60px;
     position: relative;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -76,7 +85,7 @@ h1 {
       position: absolute;
       height: 3px;
       width: 50%;
-      background: #ffffff;
+      background: $color-primary;
       border-radius: 9px;
       opacity: 1;
       left: 15px;
@@ -90,15 +99,15 @@ h1 {
       transition: .25s ease-in-out;
     }
     span:nth-child(1) {
-      top: 20px;
+      top: 10px;
     }
     
     span:nth-child(2), span:nth-child(3) {
-      top: 29px;
+      top: 19px;
     }
     
     span:nth-child(4) {
-      top: 38px;
+      top: 28px;
     }
     
     &.open span:nth-child(1) {
@@ -137,13 +146,13 @@ h1 {
     }
   }
 
-  
- 
   .navbar {
     background-color: transparent;
     width: 90%;
     transition: transform 0.3s ease;
     z-index: 1;
+    // Temp
+    display: none;
     ul {
       align-items: center;
       display: flex;
@@ -607,7 +616,7 @@ h1 {
 
 // SOCIAL FEED
 #follow-on-instagram {
-  padding: 3em 0;
+  padding: 1.5em 5%;
   .container {
     background-color: $color-bg-gray;
     box-shadow: -10px -10px 0 0 $color-secondary;
@@ -630,10 +639,10 @@ h1 {
     width: 100%; 
     margin: 0 auto;
     max-width: 1075px !important;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 5px;
-    height: 50vh;
+    height: 140vh;
   }
   .sbi_item:nth-child(1),
   .sbi_item:nth-child(6) {
@@ -649,7 +658,8 @@ h1 {
     font-size: 2.5em;
     text-align: center;
   }
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: $screen_med) {
+    padding: 3rem 0;
     .gallery-grid {
       padding: 0;
     }
@@ -681,7 +691,7 @@ h1 {
 #contact {
   background-color: $color-primary;
   color: $color-white;
-  padding: 4em 0;
+  padding: 1.5em 5%;
   h1 {
     color: $color-white;
     font-family: $font__header;
@@ -739,7 +749,7 @@ h1 {
   .contact-info-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 10em;
+    grid-gap: 1em;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
@@ -747,8 +757,9 @@ h1 {
     > div {
       width: 100%;
     }
-    @media (min-width: 481px) {
+    @media (min-width: $screen_lrg) {
       grid-template-columns: 1fr minmax(500px, 1fr);
+      grid-gap: 10em;
     }
   }
   .social-container {
@@ -758,7 +769,11 @@ h1 {
       padding: 0 0.5em;
     }
   }
+  @media screen and (min-width: $screen_lrg) {
+    padding: 4em 5%;
+  }
 }
+
 
 // SOCIAL MEDIA SIDEBAR
 #social-menu {
@@ -784,6 +799,7 @@ h1 {
   z-index: 5;
   transition: all 450ms ease;
   opacity: 0;
+  
   button {
     border: none;
     border-radius: 50%;
@@ -792,6 +808,7 @@ h1 {
     width: 60px;
     background-color: $color-primary;
     font-size: 2em;
+    outline: 0;
     padding: 0;
     position: fixed;
     bottom: 1vw;
