@@ -9,11 +9,15 @@ window.onload = function() {
 
   function onHamClick(e) {
     e.preventDefault();
-    $(this).toggleClass('open');
+    // Menu is being opened
     if(navLinks.classList.contains('closed')) {
+      menu.classList.add('open');
+      hamburger.classList.add('open');
       navLinks.classList.remove('closed');
-    } else {
+    } else { //Menu is being closed
+      menu.classList.remove('open');
       navLinks.classList.add('closed');
+      hamburger.classList.remove('open');
     }
   }
 

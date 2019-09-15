@@ -877,13 +877,13 @@ h1 {
   width: 0%;
   left: 50%;
 }
-.menu-container.overlay {
+.menu-container.overlay.open {
   top: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom: 4px solid #ff0090;
 }
-.menu-container.overlay .navbar {
+.menu-container.overlay.open .navbar {
   min-height: 4.25rem;
 }
 .menu-container .navbar {
@@ -1324,19 +1324,18 @@ h1 {
   padding: 2em 1.25em;
   position: relative;
   width: 100%;
-  box-shadow: -7px -6px 0 0 #ff0090;
-}
-#upcoming-appearances .appearance-container > div {
-  display: inline-block;
+  box-shadow: 0px -6px 0 0 #ff0090;
 }
 #upcoming-appearances .appearance-cta {
+  display: grid;
+  align-items: center;
   white-space: nowrap;
 }
 #upcoming-appearances .appearance-cta a {
   margin: 1em auto 0;
-  display: grid;
 }
 #upcoming-appearances .appearance-date {
+  text-align: center;
   text-transform: uppercase;
   line-height: 1.25em;
 }
@@ -1360,11 +1359,15 @@ h1 {
 }
 @media (min-width: 787px) {
   #upcoming-appearances .appearance-container {
+    box-shadow: -7px -6px 0 0 #ff0090;
     grid-template-columns: 1fr 3fr 1fr;
     padding: 2em;
   }
   #upcoming-appearances .appearance-cta a {
     margin-top: 0;
+  }
+  #upcoming-appearances .appearance-date {
+    text-align: left;
   }
   #upcoming-appearances .appearance-name {
     padding: 0rem 0 0.5rem;

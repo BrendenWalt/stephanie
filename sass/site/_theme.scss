@@ -132,7 +132,7 @@ h1 {
       left: 50%;
     }
   }
-  &.overlay {
+  &.overlay.open {
     top: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -605,19 +605,18 @@ h1 {
     padding: 2em 1.25em;;
     position: relative;
     width: 100%;
-    box-shadow: -7px -6px 0 0 $color-secondary;
-     > div {
-      display: inline-block;
-    }
+    box-shadow: 0px -6px 0 0 $color-secondary;
   }
   .appearance-cta {
+    display: grid;
+    align-items: center;
     white-space: nowrap;
   }
   .appearance-cta a {
     margin: 1em auto 0;
-    display: grid;
   }
   .appearance-date {
+    text-align: center;
     text-transform: uppercase;
     line-height: 1.25em;
     span{
@@ -642,11 +641,15 @@ h1 {
   
   @media (min-width: $screen_med) {
     .appearance-container {
+      box-shadow: -7px -6px 0 0 $color-secondary;
       grid-template-columns: 1fr 3fr 1fr;
       padding: 2em;
     }
     .appearance-cta a {
       margin-top: 0;
+    }
+    .appearance-date {
+      text-align: left;
     }
     .appearance-name {
       padding: 0rem 0 0.5rem;
