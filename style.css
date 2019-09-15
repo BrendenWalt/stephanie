@@ -784,10 +784,6 @@ h1 {
   background-color: #fff;
   color: #0197de;
 }
-section {
-  padding-left: 2%;
-  padding-right: 2%;
-}
 .social-menu-item {
   display: inline-block;
   text-align: center;
@@ -1023,6 +1019,9 @@ section {
     margin-left: -4vw;
   }
 }
+#envirabox-outer #envirabox-content {
+  border-radius: 0;
+}
 #gallery {
   background-color: #fff;
   padding: 5em 0;
@@ -1059,6 +1058,9 @@ section {
   top: 0 !important;
   left: 0 !important;
 }
+#gallery .envira-gallery-public .envira-gallery-item .caption {
+  display: none !important;
+}
 #gallery .envira-gallery-public .envira-gallery-image {
   display: block;
   height: 100% !important;
@@ -1092,7 +1094,7 @@ section {
   text-align: center;
 }
 #about {
-  padding: 4em 0 2em;
+  padding: 4em 0 3em;
   position: relative;
 }
 #about:after {
@@ -1100,7 +1102,7 @@ section {
   background-color: #ff0090;
   position: absolute;
   bottom: 0;
-  height: 62%;
+  height: 75%;
   width: 100%;
 }
 #about .container {
@@ -1313,7 +1315,8 @@ section {
 #upcoming-appearances .appearance-container {
   background-color: #0197de;
   color: #fff;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
@@ -1330,8 +1333,8 @@ section {
   white-space: nowrap;
 }
 #upcoming-appearances .appearance-cta a {
-  margin-top: 1em;
-  display: block;
+  margin: 1em auto 0;
+  display: grid;
 }
 #upcoming-appearances .appearance-date {
   text-transform: uppercase;
@@ -1357,7 +1360,7 @@ section {
 }
 @media (min-width: 787px) {
   #upcoming-appearances .appearance-container {
-    flex-direction: row;
+    grid-template-columns: 1fr 3fr 1fr;
     padding: 2em;
   }
   #upcoming-appearances .appearance-cta a {

@@ -245,6 +245,14 @@ get_header();
                     $date = new DateTime($date);
                   ?>
                   <span><?php echo $date->format('j'); ?></span><?php echo $date->format('M'); ?>
+                  <?php 
+                    if(get_field('appearance_end_date')) {
+                      $endDate = get_field('appearance_end_date', false, false);
+                      $endDate = new DateTime($endDate);
+                    
+                  ?>
+                    - <span><?php echo $endDate->format('j'); ?></span><?php echo $endDate->format('M'); ?>
+                  <?php } ?>
                 </div>
                 <div class="appearance-text-container">
                   <div class="appearance-name">
