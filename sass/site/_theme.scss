@@ -144,8 +144,9 @@ h1 {
 
   .navbar {
     background-color: transparent;
+    opacity: 1;
     width: 90%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 1;
     // Temp
     display: none;
@@ -162,8 +163,27 @@ h1 {
       padding: 0 1.5em;
       text-align: center;
       a {
+        position: relative;
         color: $color__link;
-        
+        &:before {
+          content: '';
+          position: absolute;
+          width: 124%;
+          height: 3px;
+          bottom: -7px;
+          left: -12%;
+          background-color: $color-primary;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+        }
+        &:hover:before {
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+        } 
         &:visited {
           color: $color__link-visited;
         }
@@ -173,6 +193,7 @@ h1 {
       }
     }
     &.closed {
+      opacity: 0;
       transform: translateX(60vw);
     }
     @media (min-width: 481px) {
@@ -620,7 +641,7 @@ h1 {
     text-transform: uppercase;
     line-height: 1.25em;
     span{
-    font-size: 2.25em;
+    font-size: 2.0em;
     font-weight: bold;
     }
   }

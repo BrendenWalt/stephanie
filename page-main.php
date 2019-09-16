@@ -244,14 +244,14 @@ get_header();
                     $date = get_field('appearance_date', false, false); 
                     $date = new DateTime($date);
                   ?>
-                  <span><?php echo $date->format('j'); ?></span><?php echo $date->format('M'); ?>
+                  <?php echo $date->format('M'); ?> <span><?php echo $date->format('j'); ?></span>
                   <?php 
                     if(get_field('appearance_end_date')) {
                       $endDate = get_field('appearance_end_date', false, false);
                       $endDate = new DateTime($endDate);
                     
                   ?>
-                    - <span><?php echo $endDate->format('j'); ?></span><?php echo $endDate->format('M'); ?>
+                    - <?php echo $endDate->format('M'); ?> <span><?php echo $endDate->format('j'); ?></span>
                   <?php } ?>
                 </div>
                 <div class="appearance-text-container">
@@ -355,21 +355,27 @@ get_header();
       <aside id="social-menu">
         <div class="container">
           <div class="social-menu">
-            <div class="social-menu-item">
-              <a href="<?php echo($instagram_url); ?>" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-            <div class="social-menu-item">
-              <a href="<?php echo($facebook_url); ?>" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-            <div class="social-menu-item">
-              <a href="<?php echo($youtube_url); ?>" target="_blank">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
+            <?php if($instagram_url) { ?>
+              <div class="social-menu-item">
+                <a href="<?php echo($instagram_url); ?>" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            <?php } ?>
+            <?php if($facebook_url) { ?>
+              <div class="social-menu-item">
+                <a href="<?php echo($facebook_url); ?>" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
+            <?php } ?>
+            <?php if($youtube_url) { ?>
+              <div class="social-menu-item">
+                <a href="<?php echo($youtube_url); ?>" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            <?php } ?>
           </div>
         </div>
       </aside>

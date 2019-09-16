@@ -888,8 +888,9 @@ h1 {
 }
 .menu-container .navbar {
   background-color: transparent;
+  opacity: 1;
   width: 90%;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 1;
   display: none;
 }
@@ -907,7 +908,27 @@ h1 {
   text-align: center;
 }
 .menu-container .navbar li a {
+  position: relative;
   color: #717171;
+}
+.menu-container .navbar li a:before {
+  content: '';
+  position: absolute;
+  width: 124%;
+  height: 3px;
+  bottom: -7px;
+  left: -12%;
+  background-color: #0197de;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.menu-container .navbar li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 .menu-container .navbar li a:visited {
   color: #717171;
@@ -916,6 +937,7 @@ h1 {
   color: #0197de;
 }
 .menu-container .navbar.closed {
+  opacity: 0;
   transform: translateX(60vw);
 }
 @media (min-width: 481px) {
@@ -1340,7 +1362,7 @@ h1 {
   line-height: 1.25em;
 }
 #upcoming-appearances .appearance-date span {
-  font-size: 2.25em;
+  font-size: 2em;
   font-weight: bold;
 }
 #upcoming-appearances .appearance-details {
