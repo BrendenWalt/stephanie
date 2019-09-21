@@ -226,11 +226,12 @@ h1 {
 }
 
 // Hero 
-.hero-body {
+#hero .hero-body {
   background-color: transparent;
-  height: 100vh;
   padding: 0;
   position: relative;
+  display: flex;
+  align-items: flex-start;
   &:after {
     content: "";
     width: 100%;
@@ -243,7 +244,7 @@ h1 {
     align-items: center;
     display: flex;
     flex: 1 1 auto;
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 100%;
     max-width: 100%;
     position: relative;
@@ -263,6 +264,8 @@ h1 {
     }
   }
   .hero-site-info {
+    margin-top: -15vh;
+    text-align: center;
     .name-container {
       display: inline-block;
       margin-bottom: 10px;
@@ -296,7 +299,8 @@ h1 {
       margin-left: 0em;
     }
   }
-  @media only screen and (min-width: 481px) {
+  @media only screen and (min-width: $screen_med) {
+    height: 100vh;
     .container {
       flex-direction: row;
     }
@@ -304,6 +308,8 @@ h1 {
       width: 45%;
     }
     .hero-site-info {
+      margin-top: 0;
+      text-align: left;
       h1{
         font-size: 9.5vw;
       }

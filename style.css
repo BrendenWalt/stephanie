@@ -804,7 +804,7 @@ h1 {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 7vh;
+  top: 4vh;
   z-index: 3;
 }
 .menu-container {
@@ -966,13 +966,14 @@ h1 {
   width: 0%;
   left: 50%;
 }
-.hero-body {
+#hero .hero-body {
   background-color: transparent;
-  height: 100vh;
   padding: 0;
   position: relative;
+  display: flex;
+  align-items: flex-start;
 }
-.hero-body:after {
+#hero .hero-body:after {
   content: "";
   width: 100%;
   height: 70%;
@@ -980,74 +981,85 @@ h1 {
   position: absolute;
   z-index: 0;
 }
-.hero-body .container {
+#hero .hero-body .container {
   align-items: center;
   display: flex;
   flex: 1 1 auto;
-  flex-direction: column-reverse;
+  flex-direction: column;
   height: 100%;
   max-width: 100%;
   position: relative;
   width: 100%;
   z-index: 1;
 }
-.hero-body #hero-headshot {
+#hero .hero-body #hero-headshot {
   max-width: 1200px;
   width: 100%;
   height: 100%;
 }
-.hero-body #hero-headshot img {
+#hero .hero-body #hero-headshot img {
   height: 100%;
   object-fit: cover;
   object-position: 50% 0%;
   width: 100%;
 }
-.hero-body .hero-site-info .name-container {
+#hero .hero-body .hero-site-info {
+  margin-top: -15vh;
+  text-align: center;
+}
+#hero .hero-body .hero-site-info .name-container {
   display: inline-block;
   margin-bottom: 10px;
   margin-left: 0;
 }
-.hero-body .hero-site-info .name-line {
+#hero .hero-body .hero-site-info .name-line {
   display: block;
 }
-.hero-body .hero-site-info .name-line div {
+#hero .hero-body .hero-site-info .name-line div {
   font-family: 'Oswald', sans-serif;
   background-color: #ff0090;
   display: inline-block;
   padding: 0.08em 0.05em;
 }
-.hero-body .hero-site-info .name-line:nth-of-type(1) div {
+#hero .hero-body .hero-site-info .name-line:nth-of-type(1) div {
   padding-top: 0.05em;
 }
-.hero-body .hero-site-info .name-line:nth-of-type(2) div {
+#hero .hero-body .hero-site-info .name-line:nth-of-type(2) div {
   padding-bottom: 0.125em;
 }
-.hero-body .hero-site-info h1 {
+#hero .hero-body .hero-site-info h1 {
   color: #fff;
   text-transform: uppercase;
   line-height: 0.8em;
   font-size: 17vw;
   margin: 0;
 }
-.hero-body .hero-site-info h3 {
+#hero .hero-body .hero-site-info h3 {
   color: #717171;
   font-size: 1.5em;
   margin-left: 0em;
 }
-@media only screen and (min-width: 481px) {
-  .hero-body .container {
+@media only screen and (min-width: 787px) {
+  #hero .hero-body {
+    height: 100vh;
+  }
+  #hero .hero-body .container {
     flex-direction: row;
   }
-  .hero-body #hero-headshot {
+  #hero .hero-body #hero-headshot {
     width: 45%;
   }
-  .hero-body .hero-site-info h1 {
+  #hero .hero-body .hero-site-info {
+    margin-top: 0;
+    text-align: left;
+  }
+  #hero .hero-body .hero-site-info h1 {
     font-size: 9.5vw;
   }
-  .hero-body .hero-site-info h3 {
+  #hero .hero-body .hero-site-info h3 {
     margin-left: 0.7em;
   }
-  .hero-body .hero-site-info .name-container {
+  #hero .hero-body .hero-site-info .name-container {
     margin-left: -4vw;
   }
 }
