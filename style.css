@@ -800,82 +800,16 @@ h1 {
     padding-right: 0;
   }
 }
+.menu-wrap {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 7vh;
+  z-index: 3;
+}
 .menu-container {
   z-index: 3;
   transition: top 450ms ease, width 450ms ease, background-color 450ms ease;
-}
-.menu-container .ham-container {
-  align-items: center;
-  color: #0197de;
-  display: flex;
-  height: 60px;
-  justify-content: center;
-  z-index: 2;
-  text-align: center;
-  vertical-align: middle;
-  width: 60px;
-  position: relative;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
-.menu-container .ham-container:hover {
-  cursor: pointer;
-}
-.menu-container .ham-container span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 50%;
-  background: #0197de;
-  border-radius: 9px;
-  opacity: 1;
-  left: 15px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-.menu-container .ham-container span:nth-child(1) {
-  top: 10px;
-}
-.menu-container .ham-container span:nth-child(2), .menu-container .ham-container span:nth-child(3) {
-  top: 19px;
-}
-.menu-container .ham-container span:nth-child(4) {
-  top: 28px;
-}
-.menu-container .ham-container.open span:nth-child(1) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
-.menu-container .ham-container.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.menu-container .ham-container.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.menu-container .ham-container.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
 }
 .menu-container.overlay.open {
   top: 0;
@@ -885,9 +819,11 @@ h1 {
 }
 .menu-container.overlay.open .navbar {
   min-height: 4.25rem;
+  width: 100%;
 }
 .menu-container .navbar {
   background-color: transparent;
+  min-height: 0;
   opacity: 1;
   width: 90%;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -949,12 +885,86 @@ h1 {
   .menu-container {
     align-items: center;
     position: fixed;
-    top: 1vw;
     right: 0;
     width: 55%;
     display: flex;
     justify-content: space-between;
   }
+}
+.ham-container {
+  align-items: center;
+  color: #0197de;
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+  vertical-align: middle;
+  width: 60px;
+  position: fixed;
+  right: 1%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 5;
+  cursor: pointer;
+}
+.ham-container:hover {
+  cursor: pointer;
+}
+.ham-container span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background: #0197de;
+  border-radius: 9px;
+  opacity: 1;
+  left: 15px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.ham-container span:nth-child(1) {
+  top: 10px;
+}
+.ham-container span:nth-child(2), .ham-container span:nth-child(3) {
+  top: 19px;
+}
+.ham-container span:nth-child(4) {
+  top: 28px;
+}
+.ham-container.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.ham-container.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ham-container.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ham-container.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 .hero-body {
   background-color: transparent;

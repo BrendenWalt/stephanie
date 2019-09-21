@@ -33,16 +33,17 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'stephanie-vanalstine' ); ?></a>
 
 	<header>
-		<div class="menu-container">
-			
-			<?php 
-				wp_nav_menu( array(
-					'theme_location'	=> 'primary',
-					'container'				=> 'nav',
-					'container_class'	=> 'navbar-collapse navbar closed',
-					'menu_class'			=> 'nav navbar-nav navbar-right'
-				))
-			?>
+		<div class="menu-wrap">
+			<div class="menu-container">
+				<?php 
+					wp_nav_menu( array(
+						'theme_location'	=> 'primary',
+						'container'				=> 'nav',
+						'container_class'	=> 'navbar-collapse navbar closed',
+						'menu_class'			=> 'nav navbar-nav navbar-right'
+					))
+				?>
+			</div>
 			<div id="nav-icon3" class="ham-container">
 				<span></span>
 				<span></span>
@@ -50,6 +51,7 @@
 				<span></span>
 			</div>
 		</div>
+		
 		
 	</header>
 
