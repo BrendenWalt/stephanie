@@ -1060,7 +1060,7 @@ h1 {
     margin-left: 0.7em;
   }
   #hero .hero-body .hero-site-info .name-container {
-    margin-left: -4vw;
+    margin-left: -6vw;
   }
 }
 #envirabox-outer #envirabox-content {
@@ -1068,7 +1068,7 @@ h1 {
 }
 #gallery {
   background-color: #fff;
-  padding: 5em 0;
+  padding: 3em 4%;
   position: relative;
   z-index: 0;
 }
@@ -1087,9 +1087,10 @@ h1 {
 #gallery .envira-gallery-public {
   display: grid;
   grid-gap: 10px;
-  grid-template: repeat(3, 1fr) / 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   margin-bottom: 0;
-  height: 70vh !important;
+  height: auto !important;
 }
 #gallery .envira-gallery-public .envira-gallery-item {
   height: 100% !important;
@@ -1112,18 +1113,13 @@ h1 {
   margin: 0 !important;
   object-fit: cover;
   object-position: 50% 50%;
+  position: relative !important;
   top: 0;
   width: 100% !important;
 }
 #gallery .envira-gallery-public .gallery-item {
   object-fit: cover;
   object-position: 50% 50%;
-}
-#gallery .envira-gallery-public .envira-gallery-item:nth-of-type(4) {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: -1;
 }
 #gallery .gallery-bg {
   background-color: #f6f6f6;
@@ -1136,6 +1132,24 @@ h1 {
 #gallery .gallery-cta {
   margin: 1em auto 0;
   text-align: center;
+}
+@media only screen and (min-width: 787px) {
+  #gallery {
+    padding: 5em 0;
+  }
+  #gallery .envira-gallery-public {
+    grid-template: repeat(3, 1fr) / 1fr 1fr 1fr;
+    height: 70vh !important;
+  }
+  #gallery .envira-gallery-public .envira-gallery-item {
+    height: 100% !important;
+  }
+  #gallery .envira-gallery-public .envira-gallery-item:nth-of-type(4) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
 }
 #about {
   padding: 4em 0 3em;
@@ -1236,7 +1250,7 @@ h1 {
 }
 #resume .resume-container {
   background-color: #fff;
-  padding: 1em 1.5em;
+  padding: 1em 4%;
   margin: 0;
 }
 #resume .resume-container:nth-child(1) {
@@ -1273,7 +1287,7 @@ h1 {
   text-transform: uppercase;
 }
 #resume .resume-details-container .experience-list, #resume .resume-details-container .experience-list-item {
-  padding-left: 2em;
+  padding-left: 0.75em;
 }
 #resume .resume-details-container .experience-list-item {
   margin: 0.5em 0;
@@ -1288,11 +1302,6 @@ h1 {
 #resume .resume-details-container .list-item-details, #resume .resume-details-container .education-detail {
   font-weight: 300;
   font-size: 1em;
-}
-@media (min-width: 787px) {
-  #resume .resume-details-container {
-    grid-template-columns: 1.5fr 1fr;
-  }
 }
 #resume .resume-banner {
   background-color: #0197de;
@@ -1310,8 +1319,15 @@ h1 {
   margin: 0 auto;
 }
 @media screen and (min-width: 787px) {
+  #resume .resume-container {
+    padding: 1em 1.5em;
+  }
   #resume .resume-details-container {
     margin: 1em auto 3em;
+    grid-template-columns: 1.5fr 1fr;
+  }
+  #resume .resume-details-container .experience-list, #resume .resume-details-container .experience-list-item {
+    padding-left: 2em;
   }
 }
 #videos {
@@ -1344,7 +1360,7 @@ h1 {
 }
 #upcoming-appearances {
   background-color: #f6f6f6;
-  padding: 3em 0 4em;
+  padding: 3em 4% 4em;
 }
 #upcoming-appearances h1 {
   text-align: center;
@@ -1369,7 +1385,7 @@ h1 {
   padding: 2em 1.25em;
   position: relative;
   width: 100%;
-  box-shadow: 0px -6px 0 0 #ff0090;
+  box-shadow: -6px -6px 0 0 #ff0090;
 }
 #upcoming-appearances .appearance-cta {
   display: grid;
