@@ -804,48 +804,52 @@ h1 {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 4vh;
   z-index: 3;
+  top: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 481px) {
+  .menu-wrap {
+    top: 4vh;
+    width: auto;
+  }
 }
 .menu-container {
+  width: 100%;
   z-index: 3;
   transition: top 450ms ease, width 450ms ease, background-color 450ms ease;
 }
-.menu-container.overlay.open {
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-bottom: 4px solid #ff0090;
-}
-.menu-container.overlay.open .navbar {
-  min-height: 4.25rem;
-  width: 100%;
-}
 .menu-container .navbar {
-  background-color: transparent;
+  align-items: center;
+  background-color: #ff0090;
+  display: flex;
   min-height: 0;
   opacity: 1;
-  width: 90%;
+  height: 100vh;
+  width: 100%;
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 1;
-  display: none;
 }
 .menu-container .navbar ul {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  height: 80%;
+  width: 65%;
+  justify-content: space-evenly;
   margin: 0 auto;
+  padding: 4vh 0;
 }
 .menu-container .navbar li {
-  display: inline-block;
+  display: block;
   list-style: none;
   padding: 0 1.5em;
   text-align: center;
+  font-size: 2rem;
 }
 .menu-container .navbar li a {
   position: relative;
-  color: #717171;
+  color: #fff;
 }
 .menu-container .navbar li a:before {
   content: '';
@@ -867,19 +871,14 @@ h1 {
   transform: scaleX(1);
 }
 .menu-container .navbar li a:visited {
-  color: #717171;
+  color: #fff;
 }
 .menu-container .navbar li a:hover {
-  color: #0197de;
+  color: #fff;
 }
 .menu-container .navbar.closed {
   opacity: 0;
   transform: translateX(60vw);
-}
-@media (min-width: 481px) {
-  .menu-container .navbar {
-    display: flex;
-  }
 }
 @media (min-width: 481px) {
   .menu-container {
@@ -889,6 +888,40 @@ h1 {
     width: 55%;
     display: flex;
     justify-content: space-between;
+  }
+  .menu-container.overlay.open {
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 4px solid #ff0090;
+  }
+  .menu-container.overlay.open .navbar {
+    min-height: 4.25rem;
+    width: 100%;
+  }
+  .menu-container .navbar {
+    background-color: transparent;
+    height: auto;
+  }
+  .menu-container .navbar ul {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+  }
+  .menu-container .navbar li {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  .menu-container .navbar li a {
+    color: #717171;
+  }
+  .menu-container .navbar li a:visited {
+    color: #717171;
+  }
+  .menu-container .navbar li a:hover {
+    color: #0197de;
   }
 }
 .ham-container {
@@ -903,6 +936,7 @@ h1 {
   width: 60px;
   position: fixed;
   right: 1%;
+  top: 1vh;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -965,6 +999,11 @@ h1 {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+@media only screen and (min-width: 481px) {
+  .ham-container {
+    top: unset;
+  }
 }
 #hero .hero-body {
   background-color: transparent;
@@ -1045,6 +1084,9 @@ h1 {
   }
   #hero .hero-body .container {
     flex-direction: row;
+  }
+  #hero .hero-body:after {
+    top: 15%;
   }
   #hero .hero-body #hero-headshot {
     width: 45%;
@@ -1286,7 +1328,7 @@ h1 {
 #resume .resume-details-container .education-title {
   text-transform: uppercase;
 }
-#resume .resume-details-container .experience-list, #resume .resume-details-container .experience-list-item {
+#resume .resume-details-container .education-list, #resume .resume-details-container .experience-list, #resume .resume-details-container .experience-list-item, #resume .resume-details-container .skills-list {
   padding-left: 0.75em;
 }
 #resume .resume-details-container .experience-list-item {
@@ -1587,12 +1629,17 @@ h1 {
   }
 }
 #social-menu {
-  display: none;
   position: fixed;
   right: 0;
+  opacity: 0;
   top: 50%;
+  transition: opacity 450ms ease;
   transform: translateY(-50%);
   z-index: 5;
+}
+#social-menu.open {
+  opacity: 1;
+  display: block;
 }
 #social-menu .container {
   width: auto;
@@ -1606,6 +1653,7 @@ h1 {
 }
 @media screen and (min-width: 481px) {
   #social-menu {
+    opacity: 1;
     display: block;
   }
 }

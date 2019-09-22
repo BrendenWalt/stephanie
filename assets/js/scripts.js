@@ -5,6 +5,7 @@ window.onload = function() {
   const navLinks = document.querySelector('.navbar');
   const navLink = navLinks.querySelectorAll('li');
   const scrollTop = document.querySelector('#scroll-to-top');
+  const social = document.querySelector('#social-menu');
 
 
   function onHamClick(e) {
@@ -14,10 +15,12 @@ window.onload = function() {
       menu.classList.add('open');
       hamburger.classList.add('open');
       navLinks.classList.remove('closed');
+      social.classList.add('open')
     } else { //Menu is being closed
       menu.classList.remove('open');
       navLinks.classList.add('closed');
       hamburger.classList.remove('open');
+      social.classList.remove('open');
     }
   }
 
