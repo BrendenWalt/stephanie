@@ -845,7 +845,7 @@ h1 {
   list-style: none;
   padding: 0 1.5em;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .menu-container .navbar li a {
   position: relative;
@@ -1517,7 +1517,7 @@ h1 {
 }
 @media screen and (min-width: 787px) {
   #follow-on-instagram {
-    padding: 3rem 0;
+    padding: 3rem 4%;
   }
   #follow-on-instagram .gallery-grid {
     padding: 0;

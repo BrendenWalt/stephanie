@@ -115,52 +115,60 @@ get_header();
             <div class="resume-container">
               <h2>Experience</h2>
               <div class="experience-list">
+                <?php
+                  $theater_loop = new WP_Query(array(
+                    'post_type'  => 'experience',
+                    'category_name' => 'theater',
+                    'orderby'    => 'date',
+                    'order'      => 'DESC'
+                    
+                  ));
+                  if($theater_loop->have_posts()) :
+                  
+                ?>
                 <div class="experience-category">
                   <h4>Theater</h4>
+                  <?php 
+                    while($theater_loop->have_posts()) : $theater_loop->the_post()
+                  ?>
                   <div class="experience-list-item">
                     <div class="list-item-title">
-                      Show Title
+                      <?php the_title(); ?>
                     </div>
                     <div class="list-item-details">
-                      Role Name | Production Company | 2019
+                      <?php echo get_field('detail_1'); ?> | <?php echo get_field('detail_2'); ?> | <?php echo get_field('detail_2'); ?>
                     </div>
                   </div>
-                  <div class="experience-list-item">
-                    <div class="list-item-title">
-                      Show Title
-                    </div>
-                    <div class="list-item-details">
-                      Role Name | Production Company | 2019
-                    </div>
-                  </div>
-                  <div class="experience-list-item">
-                    <div class="list-item-title">
-                      Show Title
-                    </div>
-                    <div class="list-item-details">
-                      Role Name | Production Company | 2019
-                    </div>
-                  </div>
+                  <?php endwhile; ?>
                 </div>
+                <?php endif; ?>
+
+                <?php 
+                  $film_loop = new WP_Query( array(
+                    'post_type'     => 'experience',
+                    'category_name' => 'tv-film',
+                    'orderby'       => 'date',
+                    'order'         => 'DESC'
+                  ));
+
+                  if($film_loop -> have_posts()) :
+                ?>
                 <div class="experience-category">
                   <h4>TV/Film</h4>
+                  <?php 
+                    while($film_loop -> have_posts()) : $film_loop -> the_post()
+                  ?>
                   <div class="experience-list-item">
                     <div class="list-item-title">
-                      Show Title
+                      <?php the_title(); ?>
                     </div>
                     <div class="list-item-details">
-                      Role Name | Production Company | 2019
+                      <?php echo get_field('detail_1'); ?> | <?php echo get_field('detail_2'); ?> | <?php echo get_field('detail_2'); ?>
                     </div>
                   </div>
-                  <div class="experience-list-item">
-                    <div class="list-item-title">
-                      Show Title
-                    </div>
-                    <div class="list-item-details">
-                      Role Name | Production Company | 2019
-                    </div>
-                  </div>
+                  <?php endwhile; ?>
                 </div>
+                  <?php endif; ?>
               </div>
             </div>
            
