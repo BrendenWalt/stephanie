@@ -28,7 +28,8 @@ window.onload = function() {
     e.preventDefault();
     const link = e.path[0].hash;
     document.querySelector(link).scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: 'center'
     });
   }
 

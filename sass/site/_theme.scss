@@ -441,7 +441,7 @@ h1 {
   @media only screen and (min-width: $screen_med) {
     padding: 5em 0;
     .envira-gallery-public {
-      grid-template: repeat(3, 1fr) / 1fr 1fr 1fr;
+      grid-template: repeat(3, minmax(0, 1fr)) / 1fr 1fr 1fr;
       height: 70vh !important;
       .envira-gallery-item {
         height: 100% !important;
