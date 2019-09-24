@@ -33,7 +33,11 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'stephanie-vanalstine' ); ?></a>
 
 	<header>
+		<?php if(is_page_template('page-main.php')) { ?>
 		<div class="menu-wrap">
+			<div class="menu-logo">
+
+			</div>
 			<div class="menu-container">
 				<?php 
 					wp_nav_menu( array(
@@ -51,6 +55,29 @@
 				<span></span>
 			</div>
 		</div>
+		<?php } else { ?>
+			<div class="menu-wrap alt-page-menu">
+				<div class="menu-logo">
+
+				</div>
+				<div class="menu-container">
+					<?php 
+						wp_nav_menu( array(
+							'theme_location'	=> 'primary',
+							'container'				=> 'nav',
+							'container_class'	=> 'navbar-collapse navbar closed',
+							'menu_class'			=> 'nav navbar-nav navbar-right'
+						))
+					?>
+				</div>
+				<div id="nav-icon3" class="ham-container">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		<?php } ?>
 		
 		
 	</header>

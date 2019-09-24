@@ -1175,13 +1175,12 @@ h1 {
   margin: 1em auto 0;
   text-align: center;
 }
-@media only screen and (min-width: 787px) {
+@media only screen and (min-width: 481px) {
   #gallery {
-    padding: 5em 0;
+    padding: 5em 4%;
   }
   #gallery .envira-gallery-public {
-    grid-template: repeat(3, minmax(0, 1fr)) / 1fr 1fr 1fr;
-    height: 70vh !important;
+    grid-template: repeat(3, minmax(0, 13vw)) / 1fr 1fr 1fr;
   }
   #gallery .envira-gallery-public .envira-gallery-item {
     height: 100% !important;
