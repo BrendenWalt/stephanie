@@ -28,6 +28,9 @@
     .sbi_item {
       height: 41vw;
     }
+    .sbi_item:nth-child(n+7) {
+      display: none;
+    }
   }
   
   .sbi_item:nth-child(1),

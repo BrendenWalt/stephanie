@@ -36,6 +36,7 @@
   button {
     border: none;
     border-radius: 50%;
+    box-shadow: 2px 3px 0 $color-secondary;
     color: $color-white;
     height: 60px;
     width: 60px;
@@ -44,9 +45,9 @@
     outline: 0;
     padding: 0;
     position: fixed;
-    bottom: 1vw;
+    bottom: 2vw;
     left: 1vw;
-    z-index: 5;
+    z-index: 2;
     &:hover {
       cursor:pointer;
     }
