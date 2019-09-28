@@ -1,0 +1,47 @@
+// General Styles
+html,.body { margin: 0 auto; }
+h1 {
+  font-family: $font__header;
+  text-transform: uppercase;
+}
+.btn {
+  border-radius: 0;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 0.75em 1.5em;
+  &:hover {
+    cursor: pointer;
+  }
+  &:visited {
+    color: $color-primary;
+  }
+}
+.btn-primary {
+  background-color: $color-primary;
+  color: $color-white;
+  &:visited {
+    color: $color-white;
+  }
+}
+.btn-secondary {
+  background-color: $color-white;
+  color: $color-primary;
+}
+.social-menu-item {
+  display: inline-block;
+  text-align: center;
+  padding: 0.65em 0;
+  i {
+    color: $color-white;
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 787px) {
+  section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

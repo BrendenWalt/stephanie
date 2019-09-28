@@ -1,0 +1,26 @@
+#videos {
+  padding: 2.5em 4%;
+  .video-grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 52vw;
+  }
+  .video-item {
+    height: 100%;
+  }
+  .video-item iframe{
+    height: 100%;
+    width: 100%;
+  }
+  @media screen and (min-width: $screen_med) {
+    padding: 4em 4%;
+    .video-grid {
+      grid-template-columns: 1.75fr 1fr;
+      grid-template-rows: repeat(2, minmax(250px, 25vh));
+    }
+    .video-item:nth-of-type(1) {
+      grid-row: span 2;
+    }
+  }
+}

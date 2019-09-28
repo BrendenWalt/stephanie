@@ -1,0 +1,117 @@
+#resume {
+  background-color: $color-bg-gray;
+  padding: 1.5em 0 0;
+  h1 {
+    font-family: $font__header;
+    font-size:2.25em;
+    letter-spacing: 0.025em;
+    margin: 0;
+    text-align: center; 
+    text-transform: uppercase;
+  }
+  h2 {
+    font-family: $font__header;
+    font-size: 1.5em;
+    letter-spacing: 0.025em;
+  }
+  h3 {
+    font-family: $font__header;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 800;
+  }
+  h4 {
+    color: $color-primary;
+    font-family: $font__header;
+    font-weight: 600;
+    font-size: 1.45em;
+  }
+  .resume-container {
+    background-color: $color-white;
+    padding: 1em 4%;
+    margin: 0;
+    &:nth-child(1) {
+      grid-row-end: span 3;
+    }
+  } 
+  .resume-details-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 1em 3% 1em;
+    h2 {
+      color: $color-primary;
+      display: inline-block;
+      font-weight: 800;
+      margin-bottom: 0.75em;
+      text-transform: uppercase;
+      &:after {
+        content: "";
+        display: block;
+        margin-top: 0.03em;
+        max-width: 100%;
+        width: 65%;
+        border-bottom: 5px solid $color-secondary;
+      }
+    }
+    .education-item {
+      margin: 1em 0;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+    .education-title {
+      text-transform: uppercase;
+    }
+    .education-list,
+    .experience-list,
+    .experience-list-item,
+    .skills-list {
+      padding-left: 0.75em;
+    }
+    .experience-list-item {
+      margin: 0.5em 0;
+      &:last-of-type {
+        margin-bottom: 1.75em;
+      }
+    }
+    .list-item-title,
+    .education-title {
+      font-weight: bold;
+      font-size: 1.15em;
+    }
+    .list-item-details,
+    .education-detail {
+      font-weight: 300;
+      font-size: 1em;
+    }
+  }
+  .resume-banner {
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.75em 0;
+    h3 {
+      color: $color-white;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: $screen_med) {
+    .resume-container {
+      padding: 1em 1.5em;
+    }
+    .resume-details-container {
+      margin: 1em auto 3em;
+      grid-template-columns: 1.5fr 1fr;
+      .experience-list,
+      .experience-list-item {
+        padding-left: 2em;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// Social Media nav
+#social-menu {
+  position: fixed;
+  right: 0;
+  opacity: 0;
+  top: 50%;
+  transition: opacity 450ms ease;
+  transform: translateY(-50%);
+  z-index: 5;
+  &.open {
+    opacity: 1;
+    display: block;
+  }
+  .container {
+    width: auto;
+  }
+  .social-menu {
+    background-color: $color-primary;
+    padding: 0.75em 10px;
+    .social-menu-item {
+      display: block;
+    }
+  }
+  @media screen and (min-width: $screen_sm) {
+    opacity: 1;
+    display: block;
+  }
+}
+
+// SCROLL TO TOP BUTTON
+#scroll-to-top {
+  z-index: 5;
+  transition: all 450ms ease;
+  opacity: 0;
+  
+  button {
+    border: none;
+    border-radius: 50%;
+    color: $color-white;
+    height: 60px;
+    width: 60px;
+    background-color: $color-primary;
+    font-size: 2em;
+    outline: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 1vw;
+    left: 1vw;
+    z-index: 5;
+    &:hover {
+      cursor:pointer;
+    }
+  }
+  &.active {
+    opacity: 1;
+  }
+}

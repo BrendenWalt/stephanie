@@ -1,0 +1,85 @@
+#contact {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 1.5em 5%;
+  h1 {
+    color: $color-white;
+    font-family: $font__header;
+    text-align: center;
+    margin: 0;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .contact-form form {
+    p {
+      margin: .25em auto;
+      &:last-of-type {
+        margin-top: 0;
+      }
+    }
+    input,
+    textarea {
+      border: 1px solid $color-white;
+      background-color: transparent;
+      border-radius: 0;
+      color: $color-white;
+      padding: .25em 0.45em;
+      width: 100%;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid $color-white;
+      }
+    }
+    input[type="submit"] {
+      background-color: $color-white;
+      border: 1px solid $color-white;
+      color: $color-primary;
+      font-weight: bold;
+      padding: 1em 6em;
+      width: auto;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      &:hover {
+        cursor: pointer;
+        color: $color-white;
+        background-color: transparent;
+      }
+    }
+  }
+  .contact-header {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .contact-info-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin:0 auto;
+    > div {
+      width: 100%;
+    }
+    @media (min-width: $screen_lrg) {
+      grid-template-columns: 1fr minmax(500px, 1fr);
+      grid-gap: 10em;
+    }
+  }
+  .social-container {
+    display: inline-block;
+    margin: 0 auto;
+    i {
+      padding: 0 0.5em;
+    }
+  }
+  @media screen and (min-width: $screen_lrg) {
+    padding: 4em 5%;
+  }
+}
