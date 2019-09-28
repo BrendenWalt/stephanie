@@ -794,7 +794,13 @@ h1 {
   display: inline-block;
   font-size: 1.5rem;
 }
+html.no-scroll, body.no-scroll {
+  overflow-y: hidden;
+}
 @media only screen and (min-width: 787px) {
+  html.no-scroll, body.no-scroll {
+    overflow-y: auto;
+  }
   section {
     padding-left: 0;
     padding-right: 0;
@@ -817,6 +823,7 @@ h1 {
 .menu-wrap .menu-container .navbar {
   align-items: center;
   background-color: #ff0090;
+  border: 10px solid #0197de;
   display: flex;
   min-height: 0;
   opacity: 1;
@@ -881,7 +888,7 @@ h1 {
     width: 50%;
   }
 }
-@media (min-width: 787px) and (orientation: landscape) {
+@media (min-width: 787px) {
   .menu-wrap {
     top: 4vh;
     width: auto;
@@ -907,6 +914,7 @@ h1 {
   }
   .menu-wrap .menu-container .navbar {
     background-color: transparent;
+    border: 0;
     height: auto;
   }
   .menu-wrap .menu-container .navbar ul {
@@ -962,7 +970,7 @@ h1 {
   position: absolute;
   height: 3px;
   width: 50%;
-  background: #0197de;
+  background: #fff;
   border-radius: 9px;
   opacity: 1;
   left: 15px;
@@ -1005,6 +1013,11 @@ h1 {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+@media only screen and (min-width: 1000px) {
+  .ham-container span {
+    background-color: #0197de;
+  }
 }
 #hero.is-fullheight {
   height: 100vh;

@@ -4,30 +4,57 @@
   const navLink = navLinks.querySelectorAll('li');
   const scrollTop = document.querySelector('#scroll-to-top');
   const social = document.querySelector('#social-menu');
+  const pageContainer = document.querySelector('body');
+  const pageHTML = document.querySelector('html');
 
-  function onHamClick(e) {
-    e.preventDefault();
+  function keyCheck (e) {
+    if(e.key === "Escape") {
+      menu.classList.remove('open');
+      navLinks.classList.add('closed');
+      hamburger.classList.remove('open');
+      social.classList.remove('open');
+      pageContainer.classList.remove('no-scroll');
+      pageHTML.classList.remove('no-scroll');
+    }
+  }
+
+  function menuToggler() {
     // Menu is being opened
     if(navLinks.classList.contains('closed')) {
       menu.classList.add('open');
       hamburger.classList.add('open');
       navLinks.classList.remove('closed');
-      social.classList.add('open')
+      social.classList.add('open');
+      pageContainer.classList.add('no-scroll');
+      pageHTML.classList.add('no-scroll');
+
     } else { //Menu is being closed
       menu.classList.remove('open');
       navLinks.classList.add('closed');
       hamburger.classList.remove('open');
       social.classList.remove('open');
+      pageContainer.classList.remove('no-scroll');
+      pageHTML.classList.remove('no-scroll');
     }
   }
 
-  function onNavLinkClick(e) {
+  function onHamClick(e) {
     e.preventDefault();
+    menuToggler();
+    
+  }
+
+  function onNavLinkClick(e) {
+    
     const link = e.path[0].hash;
-    document.querySelector(link).scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'
-    });
+    if(link) {
+      e.preventDefault();
+      document.querySelector(link).scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+    
   }
 
   function onTopClick(e) {
@@ -51,7 +78,8 @@
 
   hamburger.addEventListener('click', onHamClick);
   scrollTop.addEventListener('click', onTopClick);
-  window.addEventListener('scroll', onWindowScroll)
+  window.addEventListener('scroll', onWindowScroll);
+  document.addEventListener('keyup', keyCheck);
   
   for( var i = 0; i < navLink.length; i++) {
     navLink[i].addEventListener('click', onNavLinkClick);

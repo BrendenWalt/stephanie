@@ -1,4 +1,5 @@
 .menu-wrap {
+  
   display: flex;
   align-items: center;
   position: fixed;
@@ -16,6 +17,7 @@
     .navbar {
       align-items: center;
       background-color: $color-secondary;
+      border: 10px solid $color-primary;
       display: flex;
       min-height: 0;
       opacity: 1;
@@ -78,7 +80,7 @@
     }
     
   }
-  @media only screen and (min-width: $screen-sm) {
+  @media only screen and (min-width: $screen-sm){
     min-width: 400px;
     width: 50%;
   }
@@ -105,6 +107,7 @@
       }
       .navbar {
         background-color: transparent;
+        border: 0;
         height: auto;
         ul {
           background-color: transparent;
@@ -164,7 +167,7 @@
     position: absolute;
     height: 3px;
     width: 50%;
-    background: $color-primary;
+    background: $color-white;
     border-radius: 9px;
     opacity: 1;
     left: 15px;
@@ -214,7 +217,9 @@
     width: 0%;
     left: 50%;
   }
-  @media only screen and (min-width: $screen_sm) {
-    // top: unset;
+  @media only screen and (min-width: $screen_lrg) {
+    span {
+      background-color: $color-primary;
+    }
   }
 }

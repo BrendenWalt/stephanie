@@ -38,8 +38,16 @@ h1 {
     font-size: 1.5rem;
   }
 }
+html.no-scroll,
+body.no-scroll {
+  overflow-y: hidden;
+}
 
-@media only screen and (min-width: 787px) {
+@media only screen and (min-width: $screen_med) {
+  html.no-scroll,
+  body.no-scroll {
+    overflow-y: auto;
+  }
   section {
     padding-left: 0;
     padding-right: 0;
