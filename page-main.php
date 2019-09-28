@@ -25,14 +25,6 @@ get_header();
       <!-- Scroll button -->
       <?php get_template_part('template-parts/sticky','scroll'); ?>
 
-      
-
-
-
-      
-
-      
-
     </main><!-- #main -->
   </div><!-- #primary -->
 

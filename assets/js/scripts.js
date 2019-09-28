@@ -1,12 +1,9 @@
-window.onload = function() {
-  
   const hamburger = document.querySelector('.ham-container');
   const menu = document.querySelector('.menu-container');
   const navLinks = document.querySelector('.navbar');
   const navLink = navLinks.querySelectorAll('li');
   const scrollTop = document.querySelector('#scroll-to-top');
   const social = document.querySelector('#social-menu');
-
 
   function onHamClick(e) {
     e.preventDefault();
@@ -59,5 +56,3 @@ window.onload = function() {
   for( var i = 0; i < navLink.length; i++) {
     navLink[i].addEventListener('click', onNavLinkClick);
   }
-
-} 

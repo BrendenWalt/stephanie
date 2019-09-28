@@ -25,8 +25,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 5px;
-    height: 140vh;
+    .sbi_item {
+      height: 41vw;
+    }
   }
+  
   .sbi_item:nth-child(1),
   .sbi_item:nth-child(6) {
     // grid-column-end: span 2;
@@ -49,8 +52,10 @@
     #sbi_images {
       grid-auto-flow: dense;
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      height: 50vh;
+      grid-template-rows: repeat(3, 9vw);
+      .sbi_item {
+        height: 100%;
+      }
     }
     .sbi_item:nth-child(1),
     .sbi_item:nth-child(6) {
