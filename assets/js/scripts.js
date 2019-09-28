@@ -42,7 +42,7 @@ window.onload = function() {
   }
 
   function onWindowScroll() {
-    console.log(window.pageYOffset);
+    // console.log(window.pageYOffset);
     if(window.pageYOffset > 600) {
       scrollTop.classList.add('active');
       menu.classList.add('overlay');
