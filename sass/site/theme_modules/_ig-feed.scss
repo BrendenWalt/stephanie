@@ -59,6 +59,9 @@
       .sbi_item {
         height: 100%;
       }
+      .sbi_item:nth-child(n+7) {
+        display: block;
+      }
     }
     .sbi_item:nth-child(1),
     .sbi_item:nth-child(6) {

@@ -19,14 +19,11 @@ get_header();
 				</header><!-- .page-header -->
 
 				<div class="page-content">
+					<div class="image-404">
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/404.jpg" alt="404 image" />
+					</div>
+					<a href="/">Back to home</a>
 					
-
-
-
-					
-
-					
-
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
