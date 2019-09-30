@@ -46,6 +46,14 @@
   .btn-primary {
     display: inline-block;
   }
+  @media (min-width: $screen_sm) {
+    &:after {
+      height: 66%;
+    }
+    .about-img {
+      max-width: 60vw;
+    }
+  }
   @media (min-width: $screen_med) {
     padding: 4em 0;
     &:after {
@@ -60,9 +68,17 @@
       text-align: left;
       margin-top: 0;
     }
-    .about-text-container,
-    .about-img {
+    .about-text-container {
       width: 50%
+    }
+    .about-img {
+      width: 35%;
+    }
+  }
+  @media only screen and (min-width: $screen-lrg) {
+    &:after {
+      height: 70%;
+      top: 15%;
     }
   }
 }
