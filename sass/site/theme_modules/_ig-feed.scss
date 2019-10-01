@@ -50,12 +50,12 @@
   @media screen and (min-width: $screen_med) {
     padding: 3rem 4%;
     .gallery-grid {
-      padding: 0;
+      padding: 0 2%;
     }
     #sbi_images {
       grid-auto-flow: dense;
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(3, 9vw);
+      grid-template-rows: repeat(3, minmax(160px, 10vw));
       .sbi_item {
         height: 100%;
       }

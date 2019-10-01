@@ -888,7 +888,7 @@ html.no-scroll, body.no-scroll {
     width: 50%;
   }
 }
-@media (min-width: 787px) {
+@media (min-width: 1300px) {
   .menu-wrap {
     top: 4vh;
     width: auto;
@@ -1291,7 +1291,8 @@ html.no-scroll, body.no-scroll {
     width: 50%;
   }
   #about .about-img {
-    width: 35%;
+    box-shadow: 8px 8px 0 0 #0197de;
+    width: 40%;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -1573,12 +1574,12 @@ html.no-scroll, body.no-scroll {
     padding: 3rem 4%;
   }
   #follow-on-instagram .gallery-grid {
-    padding: 0;
+    padding: 0 2%;
   }
   #follow-on-instagram #sbi_images {
     grid-auto-flow: dense;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 9vw);
+    grid-template-rows: repeat(3, minmax(160px, 10vw));
   }
   #follow-on-instagram #sbi_images .sbi_item {
     height: 100%;
