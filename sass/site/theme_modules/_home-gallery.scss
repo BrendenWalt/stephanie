@@ -1,7 +1,9 @@
-#envirabox-outer #envirabox-content {
-  // border-width: 0 !important;
-  border-radius: 0;
-}
+#envirabox-wrap {
+  #envirabox-title-float-main {
+    background-color: transparent;
+    border-radius: 0;
+  }
+} 
 #gallery {
   background-color: $color-white;
   padding: 3em 4%;
