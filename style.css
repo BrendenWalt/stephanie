@@ -813,7 +813,7 @@ html.no-scroll, body.no-scroll {
   z-index: 3;
   right: 0;
   top: 0;
-  width: 100%;
+  width: 0;
 }
 .menu-wrap .menu-container {
   width: 100%;
@@ -882,9 +882,14 @@ html.no-scroll, body.no-scroll {
   opacity: 0;
   transform: translateX(60vw);
 }
+.menu-wrap.open {
+  width: 100%;
+}
 @media only screen and (min-width: 481px) {
   .menu-wrap {
     min-width: 400px;
+  }
+  .menu-wrap.open {
     width: 50%;
   }
 }
@@ -1285,13 +1290,12 @@ html.no-scroll, body.no-scroll {
   }
   #about .about-text-container {
     text-align: left;
+    margin-right: 2em;
     margin-top: 0;
-  }
-  #about .about-text-container {
     width: 50%;
   }
   #about .about-img {
-    box-shadow: 8px 8px 0 0 #0197de;
+    box-shadow: -8px -8px 0 0 #0197de;
     width: 40%;
   }
 }

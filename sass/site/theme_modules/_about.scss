@@ -66,13 +66,12 @@
     }
     .about-text-container {
       text-align: left;
+      margin-right: 2em;
       margin-top: 0;
-    }
-    .about-text-container {
       width: 50%
     }
     .about-img {
-      box-shadow: 8px 8px 0 0 $color_primary;
+      box-shadow: -8px -8px 0 0 $color_primary;
       width: 40%;
     }
   }

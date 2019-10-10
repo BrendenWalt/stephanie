@@ -5,7 +5,7 @@
   z-index: 3;
   right: 0;
   top: 0;
-  width: 100%;
+  width: 0;
   .menu-container {
     width: 100%;
     z-index: 3;
@@ -77,9 +77,14 @@
       }
     }
   }
+  &.open {
+    width: 100%;
+  }
   @media only screen and (min-width: $screen-sm){
     min-width: 400px;
-    width: 50%;
+    &.open {
+      width: 50%;
+    }
   }
   @media (min-width: $screen_xl) {
     top: 4vh;
