@@ -3,7 +3,7 @@
 ?>
 
 <!-- Home -->
-<section id="hero" class="hero is-fullheight">
+<section id="home" class="hero is-fullheight">
   <a name="home"></a>
   <div class="hero-body">
     <div class="container">

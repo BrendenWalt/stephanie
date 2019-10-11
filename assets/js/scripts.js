@@ -58,8 +58,11 @@
         behavior: 'smooth',
         block: 'center'
       });
+      if(window.innerWidth < 1300) {
+        closeMenu();
+      }
+      
     }
-    
   }
 
   function onTopClick(e) {
