@@ -1752,6 +1752,10 @@ html.no-scroll, body.no-scroll {
 #scroll-to-top.active {
   opacity: 1;
 }
+.post-archive h1 {
+  color: #0197de;
+  text-align: center;
+}
 .error-404 {
   display: flex;
   align-items: center;
