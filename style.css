@@ -788,11 +788,15 @@ h1 {
   display: inline-block;
   text-align: center;
   padding: 0.65em 0;
+  transition: all 500ms ease;
 }
 .social-menu-item i {
   color: #fff;
   display: inline-block;
   font-size: 1.5rem;
+}
+.social-menu-item:hover {
+  text-shadow: -0.25rem -0.25rem 0 #ff0090;
 }
 html.no-scroll, body.no-scroll {
   overflow-y: hidden;
@@ -1263,6 +1267,7 @@ html.no-scroll, body.no-scroll {
   margin-top: 0;
 }
 #about .about-text-container p {
+  line-height: 1.3em;
   text-align: justify;
 }
 #about .btn-primary {

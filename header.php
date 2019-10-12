@@ -58,7 +58,7 @@
 		<?php } else { ?>
 			<div class="menu-wrap alt-page-menu">
 				<div class="menu-logo">
-
+					<div>Stephanie VanAlstine</div>
 				</div>
 				<div class="menu-container">
 					<?php 

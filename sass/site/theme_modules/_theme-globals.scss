@@ -32,10 +32,15 @@ h1 {
   display: inline-block;
   text-align: center;
   padding: 0.65em 0;
+  transition: all 500ms ease;
   i {
     color: $color-white;
     display: inline-block;
     font-size: 1.5rem;
+    
+  }
+  &:hover {
+    text-shadow: -0.25rem -0.25rem 0 $color-secondary;
   }
 }
 html.no-scroll,
