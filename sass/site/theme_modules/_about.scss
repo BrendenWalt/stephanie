@@ -46,6 +46,11 @@
   }
   .btn-primary {
     display: inline-block;
+    &:hover {
+      color: $color-primary;
+      border-color: $color-white;
+      background-color: $color-white;
+    }
   }
   @media (min-width: $screen_sm) {
     &:after {
