@@ -11,7 +11,7 @@
     ?>
     </div>
     <div class="gallery-cta"> 
-      <button class="btn btn-primary">Gallery</button>
+      <a href="/photos" class="btn btn-primary">Gallery</a>
     </div>
   </div>
   
