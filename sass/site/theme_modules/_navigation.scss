@@ -81,8 +81,9 @@
     width: 100%;
   }
   @media only screen and (min-width: $screen-sm){
-    min-width: 400px;
+    // min-width: 400px;
     &.open {
+      min-width: 400px;
       width: 50%;
     }
   }

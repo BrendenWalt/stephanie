@@ -808,7 +808,7 @@ h1 {
   font-size: 1.5rem;
 }
 .social-menu-item:hover {
-  text-shadow: -0.25rem -0.25rem 0 #ff0090;
+  text-shadow: -0.2rem -0.2rem 0 #ff0090;
 }
 html.no-scroll, body.no-scroll {
   overflow-y: hidden;
@@ -902,10 +902,8 @@ html.no-scroll, body.no-scroll {
   width: 100%;
 }
 @media only screen and (min-width: 481px) {
-  .menu-wrap {
-    min-width: 400px;
-  }
   .menu-wrap.open {
+    min-width: 400px;
     width: 50%;
   }
 }

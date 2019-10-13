@@ -1,3 +1,7 @@
+<?php
+  $instagram_url                           = get_field('instagram_url');
+?>
+
 <section id="follow-on-instagram">
   <div class="container">
     <div class="social-menu-item">
