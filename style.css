@@ -961,17 +961,18 @@ html.no-scroll, body.no-scroll {
 }
 .ham-container {
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
   color: #0197de;
   display: flex;
-  height: 45px;
+  height: 60px;
   justify-content: center;
   z-index: 2;
   text-align: center;
   vertical-align: middle;
   width: 60px;
   position: fixed;
-  right: 1%;
-  top: 1vh;
+  right: 0%;
+  top: 0vh;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -994,7 +995,7 @@ html.no-scroll, body.no-scroll {
   background: #0197de;
   border-radius: 9px;
   opacity: 1;
-  left: 15px;
+  left: 18px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -1005,13 +1006,16 @@ html.no-scroll, body.no-scroll {
   transition: 0.25s ease-in-out;
 }
 .ham-container span:nth-child(1) {
-  top: 10px;
+  top: 17px;
 }
 .ham-container span:nth-child(2), .ham-container span:nth-child(3) {
-  top: 19px;
+  top: 26px;
 }
 .ham-container span:nth-child(4) {
-  top: 28px;
+  top: 35px;
+}
+.ham-container.open {
+  background-color: transparent;
 }
 .ham-container.open span:nth-child(1) {
   top: 18px;
@@ -1051,7 +1055,7 @@ html.no-scroll, body.no-scroll {
   content: "";
   width: 100%;
   height: 70%;
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   position: absolute;
   z-index: 0;
 }
@@ -1160,7 +1164,7 @@ html.no-scroll, body.no-scroll {
 }
 #gallery:after {
   content: "";
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1168,6 +1172,8 @@ html.no-scroll, body.no-scroll {
   height: 50%;
 }
 #gallery .container {
+  max-width: 1300px;
+  width: 100%;
   z-index: 2;
 }
 #gallery .envira-gallery-public {
@@ -1208,7 +1214,7 @@ html.no-scroll, body.no-scroll {
   object-position: 50% 50%;
 }
 #gallery .gallery-bg {
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   position: absolute;
   bottom: 0;
   height: 55%;
@@ -1224,7 +1230,7 @@ html.no-scroll, body.no-scroll {
     padding: 5em 4%;
   }
   #gallery .envira-gallery-public {
-    grid-template: repeat(3, minmax(0, 13vw)) / 1fr 1fr 1fr;
+    grid-template: repeat(3, minmax(175px, 15vw)) / 1fr 1fr 1fr;
   }
   #gallery .envira-gallery-public .envira-gallery-item {
     height: 100% !important;
@@ -1328,7 +1334,7 @@ html.no-scroll, body.no-scroll {
   }
 }
 #resume {
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   padding: 1.5em 0 0;
 }
 #resume h1 {
@@ -1476,7 +1482,7 @@ html.no-scroll, body.no-scroll {
   }
 }
 #upcoming-appearances {
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   padding: 3em 4% 4em;
 }
 #upcoming-appearances h1 {
@@ -1555,7 +1561,7 @@ html.no-scroll, body.no-scroll {
   padding: 1.5em 5%;
 }
 #follow-on-instagram .container {
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   box-shadow: -10px -10px 0 0 #ff0090;
   padding: 1em 0 2.5em;
 }
@@ -1570,6 +1576,10 @@ html.no-scroll, body.no-scroll {
 }
 #follow-on-instagram #sb_instagram .sbi_item .sbi_photo_wrap a {
   height: 100% !important;
+}
+#follow-on-instagram #sb_instagram .sbi_item .sbi_photo img {
+  height: 100%;
+  object-fit: cover;
 }
 #follow-on-instagram #sbi_images {
   display: grid;

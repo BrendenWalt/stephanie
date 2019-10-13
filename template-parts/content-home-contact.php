@@ -3,6 +3,8 @@
   $instagram_url                           = get_field('instagram_url');
   $facebook_url                            = get_field('facebook_url');
   $youtube_url                             = get_field('youtube_url');
+  $contact_header                          = get_field('contact_header');
+  $contact_message                         = get_field('contact_message');
 ?>
 
 <!-- Contact -->
@@ -39,8 +41,8 @@
     
     <div class="contact-info-container">
       <div>
-        <h3>Header</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eos mollitia repudiandae, amet nisi non?</p>
+        <h3><?php echo($contact_header); ?></h3>
+        <p><?php echo($contact_message); ?></p>
       </div>
       <div>
         <div class="contact-form">
