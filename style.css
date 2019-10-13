@@ -822,6 +822,12 @@ html.no-scroll, body.no-scroll {
     padding-right: 0;
   }
 }
+@media only screen and (min-width: 1000px) {
+  main .container {
+    max-width: 1200px;
+    width: 94%;
+  }
+}
 .menu-wrap {
   display: flex;
   align-items: center;
@@ -1227,6 +1233,8 @@ html.no-scroll, body.no-scroll {
   #gallery {
     padding: 5em 4%;
   }
+}
+@media only screen and (min-width: 787px) {
   #gallery .envira-gallery-public {
     grid-template: repeat(3, minmax(175px, 15vw)) / 1fr 1fr 1fr;
   }
@@ -1472,6 +1480,16 @@ html.no-scroll, body.no-scroll {
   }
   #videos .video-item:nth-of-type(1) {
     grid-row: span 2;
+  }
+  #videos .video-item iframe {
+    background-color: #000;
+  }
+  #videos .video-item .player {
+    border: 4px solid #0f0;
+  }
+  #videos .video-item .vp-center .player {
+    background-color: #000;
+    height: 100% !important;
   }
 }
 @media screen and (min-width: 787px) and (orientation: portrait) {

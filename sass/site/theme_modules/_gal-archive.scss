@@ -3,4 +3,9 @@
     color: $color-primary;
     text-align: center;
   }
+  .entry-content {
+    .caption {
+      // display: none !important;
+    }
+  }
 }

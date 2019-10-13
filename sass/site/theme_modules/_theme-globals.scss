@@ -70,3 +70,10 @@ body.no-scroll {
     padding-right: 0;
   }
 }
+
+@media only screen and (min-width: $screen_lrg) {
+  main .container {
+    max-width: 1200px;
+    width: 94%;
+  }
+}
