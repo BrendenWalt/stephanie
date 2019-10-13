@@ -111,7 +111,7 @@
   <!-- Banner -->
   <div class="resume-banner">
     <div>
-      <h3>Download Full Resume</h3>
+      <h3>Download Resume & Headshot</h3>
     </div>
     <div class="btn">
       <a href="<?php echo($download_resume_link); ?>" class="btn btn-secondary" target="_blank">Download</a>
