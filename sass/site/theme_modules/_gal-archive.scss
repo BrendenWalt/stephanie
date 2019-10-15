@@ -3,9 +3,20 @@
     color: $color-primary;
     text-align: center;
   }
+  h2 {
+    color: $color-primary;
+    margin-bottom: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  section {
+    margin-top: 1.5em;
+  }
   .entry-content {
+    margin-top: 0; 
     .caption {
       // display: none !important;
     }
   }
+
 }

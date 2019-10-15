@@ -17,9 +17,6 @@ get_header();
 			<section class="hero">
 				<div class="hero-body">
 					<div class="container">
-					<?php
-				// the_archive_title( '<h1 class="page-title">', '</h1>' );
-				?>
 						<h1>Photos<h1>
 					</div>
 				</div>

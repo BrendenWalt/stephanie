@@ -58,24 +58,24 @@
 		<?php } else { ?>
 			<div class="menu-wrap alt-page-menu">
 				<div class="menu-logo">
-					<div>Stephanie VanAlstine</div>
+					<a href="/"><div><span>Stephanie</span></div><div><span>VanAlstine</span></div></a>
 				</div>
-				<div class="menu-container">
+				<!-- <div class="menu-container"> -->
 					<?php 
-						wp_nav_menu( array(
-							'theme_location'	=> 'primary',
-							'container'				=> 'nav',
-							'container_class'	=> 'navbar-collapse navbar closed',
-							'menu_class'			=> 'nav navbar-nav navbar-right'
-						))
+						// wp_nav_menu( array(
+						// 	'theme_location'	=> 'primary',
+						// 	'container'				=> 'nav',
+						// 	'container_class'	=> 'navbar-collapse navbar closed',
+						// 	'menu_class'			=> 'nav navbar-nav navbar-right'
+						// ))
 					?>
-				</div>
-				<div id="nav-icon3" class="ham-container">
+				<!-- </div> -->
+				<!-- <div id="nav-icon3" class="ham-container">
 					<span></span>
 					<span></span>
 					<span></span>
 					<span></span>
-				</div>
+				</div> -->
 			</div>
 		<?php } ?>
 		

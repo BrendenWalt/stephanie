@@ -963,6 +963,38 @@ html.no-scroll, body.no-scroll {
     color: #0197de;
   }
 }
+.menu-wrap.alt-page-menu {
+  position: relative;
+  top: 20px;
+  min-width: 0;
+}
+@media only screen and (min-width: 1000px) {
+  .menu-wrap.alt-page-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+  .menu-wrap.alt-page-menu .menu-container {
+    width: 100%;
+    right: 0;
+  }
+  .menu-wrap.alt-page-menu .menu-logo {
+    display: block;
+  }
+  .menu-wrap.alt-page-menu .menu-logo div {
+    color: #fff;
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+    padding: 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .menu-wrap.alt-page-menu .menu-logo span {
+    background-color: #ff0090;
+  }
+}
 .ham-container {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.6);
@@ -1484,13 +1516,6 @@ html.no-scroll, body.no-scroll {
   #videos .video-item iframe {
     background-color: #000;
   }
-  #videos .video-item .player {
-    border: 4px solid #0f0;
-  }
-  #videos .video-item .vp-center .player {
-    background-color: #000;
-    height: 100% !important;
-  }
 }
 @media screen and (min-width: 787px) and (orientation: portrait) {
   #videos .video-grid {
@@ -1798,6 +1823,18 @@ html.no-scroll, body.no-scroll {
 .post-archive h1 {
   color: #0197de;
   text-align: center;
+}
+.post-archive h2 {
+  color: #0197de;
+  margin-bottom: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+.post-archive section {
+  margin-top: 1.5em;
+}
+.post-archive .entry-content {
+  margin-top: 0;
 }
 .error-404 {
   display: flex;

@@ -136,6 +136,36 @@
     }
   }
 }
+.menu-wrap.alt-page-menu {
+  position: relative;
+  top: 20px;
+  min-width: 0;
+  @media only screen and (min-width: $screen_lrg) {
+    flex-direction: column;
+    width: 100%;
+    .menu-container {
+      width: 100%;
+      right: 0;
+    }
+    .menu-logo {
+      display: block;
+      div {
+        color: #ffffff;
+        display: block;
+        font-family: $font__header;
+        font-weight: bold;
+        font-size: 2.5rem;
+        line-height: 2.25rem;
+        padding: 0 1rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      span {
+        background-color: $color-secondary;
+      }
+    }
+  }
+}
 
 .ham-container {
   align-items: center;
