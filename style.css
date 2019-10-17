@@ -921,7 +921,7 @@ html.no-scroll, body.no-scroll {
   .menu-wrap .menu-container {
     align-items: center;
     position: fixed;
-    right: 45px;
+    right: 10px;
     width: 55%;
     display: flex;
     justify-content: space-between;
@@ -965,7 +965,8 @@ html.no-scroll, body.no-scroll {
 }
 .menu-wrap.alt-page-menu {
   position: relative;
-  top: 20px;
+  padding: 15px 0;
+  top: 0px;
   min-width: 0;
 }
 @media only screen and (min-width: 1000px) {
@@ -985,14 +986,24 @@ html.no-scroll, body.no-scroll {
     display: block;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
-    font-size: 2.5rem;
-    line-height: 2.25rem;
+    font-size: 3rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.025em;
     padding: 0 1rem;
     text-align: center;
     text-transform: uppercase;
   }
+  .menu-wrap.alt-page-menu .menu-logo div:nth-child(1) span {
+    padding-top: 5px;
+  }
+  .menu-wrap.alt-page-menu .menu-logo div:nth-child(2) span {
+    padding-bottom: 8px;
+  }
   .menu-wrap.alt-page-menu .menu-logo span {
     background-color: #ff0090;
+    display: inline-block;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
   }
 }
 .ham-container {
@@ -1825,7 +1836,8 @@ html.no-scroll, body.no-scroll {
   text-align: center;
 }
 .post-archive h2 {
-  color: #0197de;
+  color: #515151;
+  font-size: 1.25em;
   margin-bottom: 0;
   text-align: left;
   text-transform: uppercase;
@@ -1834,6 +1846,19 @@ html.no-scroll, body.no-scroll {
   margin-top: 1.5em;
 }
 .post-archive .entry-content {
+  margin-top: 0;
+}
+.post-archive .entry-content .caption {
+  opacity: 0 !important;
+}
+.post-archive .entry-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+.post-archive .entry-title {
+  padding-bottom: 5px;
+}
+.post-archive .hero {
   margin-top: 0;
 }
 .error-404 {

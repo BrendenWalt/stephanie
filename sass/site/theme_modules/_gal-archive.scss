@@ -4,7 +4,8 @@
     text-align: center;
   }
   h2 {
-    color: $color-primary;
+    color: #515151;
+    font-size:1.25em;
     margin-bottom: 0;
     text-align: left;
     text-transform: uppercase;
@@ -15,8 +16,18 @@
   .entry-content {
     margin-top: 0; 
     .caption {
-      // display: none !important;
+      opacity: 0 !important;
     }
+  }
+  .entry-header h2 {
+    font-family: $font__header;
+    font-weight: bold;
+  }
+  .entry-title {
+    padding-bottom: 5px;
+  }
+  .hero {
+    margin-top: 0;
   }
 
 }

@@ -15,9 +15,9 @@ get_header();
 
 			<!-- Page header -->
 			<section class="hero">
-				<div class="hero-body">
+				<div class="">
 					<div class="container">
-						<h1>Photos<h1>
+						<h1>Image Galleries<h1>
 					</div>
 				</div>
 			</section>
