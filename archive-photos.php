@@ -22,7 +22,7 @@ get_header();
 				</div>
 			</section>
 
-			<div class="container">
+			<div class="galleries-container">
 
 			<?php if ( have_posts() ) : ?>
 

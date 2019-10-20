@@ -22,9 +22,16 @@
   .entry-header h2 {
     font-family: $font__header;
     font-weight: bold;
+    text-align:center;
   }
   .entry-title {
     padding-bottom: 5px;
+  }
+  .galleries-container section {
+    .container {
+      padding: 1em 0;
+      max-width: none;
+    }
   }
   .hero {
     margin-top: 0;

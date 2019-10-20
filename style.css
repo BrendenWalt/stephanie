@@ -825,7 +825,7 @@ html.no-scroll, body.no-scroll {
 @media only screen and (min-width: 1000px) {
   main .container {
     max-width: 1200px;
-    width: 94%;
+    width: 100%;
   }
 }
 .menu-wrap {
@@ -1369,7 +1369,7 @@ html.no-scroll, body.no-scroll {
     text-align: left;
     margin-right: 2em;
     margin-top: 0;
-    width: 50%;
+    width: 58%;
   }
   #about .about-img {
     box-shadow: -8px -8px 0 0 #0197de;
@@ -1489,7 +1489,7 @@ html.no-scroll, body.no-scroll {
   #resume .resume-details-container {
     margin: 1em auto 3em;
     grid-template-columns: 1.5fr 1fr;
-    width: 92%;
+    width: 100%;
   }
   #resume .resume-details-container .experience-list, #resume .resume-details-container .experience-list-item {
     padding-left: 2em;
@@ -1854,9 +1854,14 @@ html.no-scroll, body.no-scroll {
 .post-archive .entry-header h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
+  text-align: center;
 }
 .post-archive .entry-title {
   padding-bottom: 5px;
+}
+.post-archive .galleries-container section .container {
+  padding: 1em 0;
+  max-width: none;
 }
 .post-archive .hero {
   margin-top: 0;
