@@ -79,6 +79,7 @@
     .about-img {
       box-shadow: -8px -8px 0 0 $color_primary;
       width: 40%;
+      max-width: 475px;
     }
   }
   @media only screen and (min-width: $screen-lrg) {

@@ -93,4 +93,9 @@
       }
     }
   }
+  @media only screen and (min-width: $screen_xl) {
+    .container {
+      max-width: 1500px;
+    }
+  }
 }

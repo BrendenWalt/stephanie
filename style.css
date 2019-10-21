@@ -828,6 +828,11 @@ html.no-scroll, body.no-scroll {
     width: 100%;
   }
 }
+@media only screen and (min-width: 1300px) {
+  main .container {
+    max-width: 1440px;
+  }
+}
 .menu-wrap {
   display: flex;
   align-items: center;
@@ -1291,6 +1296,11 @@ html.no-scroll, body.no-scroll {
     grid-row-end: -1;
   }
 }
+@media only screen and (min-width: 1300px) {
+  #gallery .container {
+    max-width: 1500px;
+  }
+}
 #about {
   padding: 4em 0 3em;
   position: relative;
@@ -1374,6 +1384,7 @@ html.no-scroll, body.no-scroll {
   #about .about-img {
     box-shadow: -8px -8px 0 0 #0197de;
     width: 40%;
+    max-width: 475px;
   }
 }
 @media only screen and (min-width: 1000px) {
