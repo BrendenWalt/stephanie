@@ -19,7 +19,7 @@ get_header();
       <?php get_template_part('template-parts/content','home-ig-feed'); ?>
       <?php get_template_part('template-parts/content','home-contact'); ?>
       
-      <!-- nav -->
+      <!-- social -->
       <?php get_template_part('template-parts/sticky','social'); ?>
 
       <!-- Scroll button -->

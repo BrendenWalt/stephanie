@@ -39,6 +39,7 @@
 
 			?>
 		</div><!-- .entry-content -->
+		<?php get_template_part('template-parts/sticky','social'); ?>
 	</div>
 
 
