@@ -57,9 +57,13 @@
 		</div>
 		<?php } else { ?>
 			<div class="menu-wrap alt-page-menu">
+				<div class="to-home spacer">
+					<a href="/">Home</a>
+				</div>
 				<div class="menu-logo">
 					<a href="/"><div><span>Stephanie</span></div><div><span>VanAlstine</span></div></a>
 				</div>
+				<div class="spacer"></div>
 				<!-- <div class="menu-container"> -->
 					<?php 
 						// wp_nav_menu( array(

@@ -138,11 +138,12 @@
 }
 .menu-wrap.alt-page-menu {
   position: relative;
-  padding: 15px 0;
+  padding: 15px 2%;
   top: 0px;
   min-width: 0;
   @media only screen and (min-width: $screen_lrg) {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     .menu-container {
       width: 100%;
@@ -175,6 +176,11 @@
         padding-right: 0.25em;
       }
       
+    }
+    .spacer {
+      font-weight: 400;
+      align-self: flex-start;
+      width: 15vw;
     }
   }
 }
