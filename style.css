@@ -1535,8 +1535,8 @@ html.no-scroll, body.no-scroll {
     padding: 4em 4%;
   }
   #videos .video-grid {
-    grid-template-columns: 1.75fr 1fr;
-    grid-template-rows: repeat(2, minmax(200px, 25vh));
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, minmax(200px, 31vh));
   }
   #videos .video-item:nth-of-type(1) {
     grid-row: span 2;
@@ -1548,6 +1548,12 @@ html.no-scroll, body.no-scroll {
 @media screen and (min-width: 787px) and (orientation: portrait) {
   #videos .video-grid {
     grid-template-rows: repeat(2, minmax(200px, 15vh));
+  }
+}
+@media screen and (min-width: 1300px) {
+  #videos .video-grid {
+    grid-template-columns: 1.75fr 1fr;
+    grid-template-rows: repeat(2, minmax(200px, 25vh));
   }
 }
 #upcoming-appearances {
@@ -1708,6 +1714,7 @@ html.no-scroll, body.no-scroll {
 }
 #contact {
   background-color: #0197de;
+  background: linear-gradient(45deg, #0197de, #0175c5);
   color: #fff;
   padding: 1.5em 5%;
 }

@@ -1,5 +1,6 @@
 #contact {
   background-color: $color-primary;
+  background: linear-gradient(45deg, $color-primary, darken(adjust-hue( $color-primary, 5% ), 5%));
   color: $color-white;
   padding: 1.5em 5%;
   h1 {

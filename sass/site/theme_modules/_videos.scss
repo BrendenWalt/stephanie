@@ -16,8 +16,8 @@
   @media screen and (min-width: $screen_med) {
     padding: 4em 4%;
     .video-grid {
-      grid-template-columns: 1.75fr 1fr;
-      grid-template-rows: repeat(2, minmax(200px, 25vh));
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(2, minmax(200px, 31vh));
     }
     .video-item:nth-of-type(1) {
       grid-row: span 2;
@@ -31,6 +31,12 @@
   @media screen and (min-width: $screen_med) and (orientation: portrait) {
     .video-grid {
       grid-template-rows: repeat(2, minmax(200px, 15vh));
+    }
+  }
+  @media screen and (min-width: $screen-xl) {
+    .video-grid {
+      grid-template-columns: 1.75fr 1fr;
+      grid-template-rows: repeat(2, minmax(200px, 25vh));
     }
   }
 }
