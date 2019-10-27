@@ -17,7 +17,7 @@
     padding: 4em 4%;
     .video-grid {
       grid-template-columns: 2fr 1fr;
-      grid-template-rows: repeat(2, minmax(200px, 31vh));
+      grid-template-rows: repeat(2, minmax(200px, 18vw));
     }
     .video-item:nth-of-type(1) {
       grid-row: span 2;
@@ -33,7 +33,13 @@
       grid-template-rows: repeat(2, minmax(200px, 15vh));
     }
   }
-  @media screen and (min-width: $screen-xl) {
+  @media screen and (min-width: $screen_lrg) {
+    .video-grid {
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(2, minmax(200px, 31vh));
+    }
+  }
+  @media screen and (min-width: $screen-xxl) {
     .video-grid {
       grid-template-columns: 1.75fr 1fr;
       grid-template-rows: repeat(2, minmax(200px, 25vh));

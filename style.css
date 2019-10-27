@@ -1536,7 +1536,7 @@ html.no-scroll, body.no-scroll {
   }
   #videos .video-grid {
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, minmax(200px, 31vh));
+    grid-template-rows: repeat(2, minmax(200px, 18vw));
   }
   #videos .video-item:nth-of-type(1) {
     grid-row: span 2;
@@ -1550,7 +1550,13 @@ html.no-scroll, body.no-scroll {
     grid-template-rows: repeat(2, minmax(200px, 15vh));
   }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1000px) {
+  #videos .video-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, minmax(200px, 31vh));
+  }
+}
+@media screen and (min-width: 1700px) {
   #videos .video-grid {
     grid-template-columns: 1.75fr 1fr;
     grid-template-rows: repeat(2, minmax(200px, 25vh));
