@@ -1513,6 +1513,10 @@ html.no-scroll, body.no-scroll {
   }
 }
 @media screen and (min-width: 1000px) {
+  #resume .container {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
 }
 #videos {
   padding: 2.5em 4%;
@@ -1733,7 +1737,6 @@ html.no-scroll, body.no-scroll {
 #contact h3 {
   font-weight: 600;
   font-size: 1.5em;
-  text-transform: uppercase;
 }
 #contact .contact-form form p {
   margin: 0.25em auto;
@@ -1773,7 +1776,6 @@ html.no-scroll, body.no-scroll {
 }
 #contact .contact-header {
   text-align: center;
-  text-transform: uppercase;
 }
 #contact .contact-info-container {
   display: grid;
@@ -1785,6 +1787,7 @@ html.no-scroll, body.no-scroll {
   margin: 0 auto;
 }
 #contact .contact-info-container > div {
+  padding-top: 1em;
   width: 100%;
 }
 @media (min-width: 1000px) {

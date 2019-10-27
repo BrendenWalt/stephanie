@@ -117,8 +117,9 @@
     }
   }
   @media screen and (min-width: $screen_lrg) {
-    .resume-details-container {
-
+    .container {
+      padding-right: 5vw;
+      padding-left: 5vw;
     }
   }
 }
