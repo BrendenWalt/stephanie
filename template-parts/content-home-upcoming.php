@@ -7,7 +7,7 @@
         $appearances_loop = new WP_Query( array(
           'post_type'   => 'upcoming_appearances',
           'orderby'     => 'post_id',
-          'order'       => 'DESC',
+          'order'       => 'ASC',
           'posts_per_page' => '4'
         ));
         if($appearances_loop->have_posts()) : while($appearances_loop->have_posts()) : $appearances_loop->the_post();
