@@ -68,13 +68,16 @@
     }
     .container {
       flex-direction: row-reverse;
-      padding: 0;
+      padding: 0 2vw;
     }
     .about-text-container {
       text-align: left;
       margin-right: 2em;
       margin-top: 0;
-      width: 58%
+      width: 60%;
+      p {
+        line-height: 1em;
+      }
     }
     .about-img {
       box-shadow: -8px -8px 0 0 $color_primary;
@@ -86,6 +89,17 @@
     &:after {
       height: 70%;
       top: 15%;
+    }
+    .container {
+      padding: 0 2vw;
+    }
+    .about-text-container p {
+      line-height: 1.3em;
+    }
+  }
+  @media only screen and (min-width: $screen_xl) {
+    .container {
+      padding: 0;
     }
   }
 }
