@@ -114,7 +114,7 @@
       <h3>Download Resume & Headshot</h3>
     </div>
     <div class="btn">
-      <a href="<?php echo($download_resume_link); ?>" class="btn btn-secondary" target="_blank">Download</a>
+      <a href="<?php echo($download_resume_link['url']);?>" title="<?php echo($download_resume_link['title']); ?>" class="btn btn-secondary" target="_blank">Download</a>
     </div>
   </div>
   
