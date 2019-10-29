@@ -1565,19 +1565,19 @@ html.no-scroll, body.no-scroll {
 }
 @media screen and (min-width: 787px) and (orientation: portrait) {
   #videos .video-grid {
-    grid-template-rows: repeat(2, minmax(200px, 15vh));
+    grid-template-rows: repeat(2, minmax(150px, 18vw));
   }
 }
 @media screen and (min-width: 1000px) {
   #videos .video-grid {
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, minmax(200px, 31vh));
+    grid-template-rows: repeat(2, minmax(200px, 16vw));
   }
 }
 @media screen and (min-width: 1700px) {
   #videos .video-grid {
     grid-template-columns: 1.75fr 1fr;
-    grid-template-rows: repeat(2, minmax(200px, 25vh));
+    grid-template-rows: repeat(2, minmax(200px, 16vw));
   }
 }
 #upcoming-appearances {
