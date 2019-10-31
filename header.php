@@ -16,15 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/bulma.min.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/fonts/css/all.min.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Muli:300,600,800|Oswald:700&display=swap" rel="stylesheet">
-  <!-- jQuery -->
-  <script src="<?php bloginfo('stylesheet_directory')?>/assets/js/jquery-3.4.1.min.js" defer></script>
-  <!-- Javascript -->
-	<script src="<?php bloginfo('stylesheet_directory')?>/assets/js/scripts.js" defer></script>
+  
 	<?php wp_head(); ?>
 </head>
 

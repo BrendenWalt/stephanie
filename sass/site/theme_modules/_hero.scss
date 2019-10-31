@@ -1,5 +1,5 @@
 .hero.is-fullheight {
-  height: 100vh;
+  height: 96vh;
   min-height: 0;
   .hero-body {
     background-color: transparent;
@@ -77,6 +77,7 @@
     }
   } 
   @media only screen and (min-width: $screen_sm) {
+    height: 100vh;
     .hero-body {
       .hero-site-info {
         margin-top: -20vh;

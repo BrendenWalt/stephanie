@@ -1098,7 +1098,7 @@ html.no-scroll, body.no-scroll {
   left: 50%;
 }
 .hero.is-fullheight {
-  height: 100vh;
+  height: 96vh;
   min-height: 0;
 }
 .hero.is-fullheight .hero-body {
@@ -1176,6 +1176,9 @@ html.no-scroll, body.no-scroll {
   margin-left: 0em;
 }
 @media only screen and (min-width: 481px) {
+  .hero.is-fullheight {
+    height: 100vh;
+  }
   .hero.is-fullheight .hero-body .hero-site-info {
     margin-top: -20vh;
   }
