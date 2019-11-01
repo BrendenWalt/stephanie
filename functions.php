@@ -120,15 +120,15 @@ add_action( 'widgets_init', 'stephanie_vanalstine_widgets_init' );
  * Enqueue scripts and styles.
  */
 function stephanie_vanalstine_scripts() {
+	// wp_deregister_script('jquery');
 	wp_enqueue_script( 'stephanie-vanalstine-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'stephanie-vanalstine-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	
-	wp_enqueue_style( 'stephanie-vanalstine-bulma', get_template_directory_uri() . '/assets/css/bulma.min.css' );
 	wp_enqueue_style( 'stephanie-vanalstine-fa', get_template_directory_uri() . '/assets/fonts/css/all.min.css' );
+	wp_enqueue_style( 'stephanie-vanalstine-gf', 'https://fonts.googleapis.com/css?family=Muli:300,600,800|Oswald:700&display=swap' );
 	wp_enqueue_style( 'stephanie-vanalstine-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'stephanie-vanalstine-jq', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js');
-	wp_enqueue_script( 'stephanie-vanalstine-js', get_template_directory_uri() . '/assets/js/scripts.js', array('stephanie-vanalstine-jq'), null, true);
+	// wp_enqueue_script( 'stephanie-vanalstine-jq', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js');
+	wp_enqueue_script( 'stephanie-vanalstine-js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -162,4 +162,12 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+// function modify_jquery_version() {
+//     if (!is_admin()) {
+//         wp_deregister_script('jquery');
+//         wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js', false, '2.0.s');
+//         wp_enqueue_script('jquery');
+//     }
+// }
+// add_action('init', 'modify_jquery_version');
 
