@@ -1074,47 +1074,53 @@ html.no-scroll, body.no-scroll {
   padding: 15px 2%;
   top: 0px;
   min-width: 0;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
-@media only screen and (min-width: 1000px) {
+.menu-wrap.alt-page-menu .menu-logo {
+  display: block;
+}
+.menu-wrap.alt-page-menu .menu-logo div {
+  color: #fff;
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 2.75rem;
+  letter-spacing: -0.025em;
+  padding: 0 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.menu-wrap.alt-page-menu .menu-logo div:nth-child(1) span {
+  padding-top: 5px;
+}
+.menu-wrap.alt-page-menu .menu-logo div:nth-child(2) span {
+  padding-bottom: 8px;
+}
+.menu-wrap.alt-page-menu .menu-logo span {
+  background-color: #ff0090;
+  display: inline-block;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.menu-wrap.alt-page-menu .menu-container {
+  width: 100%;
+  right: 0;
+}
+.menu-wrap.alt-page-menu .spacer {
+  font-weight: 400;
+  align-self: flex-start;
+  width: auto;
+  margin-bottom: 1rem;
+}
+@media only screen and (min_width: 481px) {
   .menu-wrap.alt-page-menu {
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .menu-wrap.alt-page-menu .menu-container {
-    width: 100%;
-    right: 0;
-  }
-  .menu-wrap.alt-page-menu .menu-logo {
-    display: block;
-  }
-  .menu-wrap.alt-page-menu .menu-logo div {
-    color: #fff;
-    display: block;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 2.75rem;
-    letter-spacing: -0.025em;
-    padding: 0 1rem;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .menu-wrap.alt-page-menu .menu-logo div:nth-child(1) span {
-    padding-top: 5px;
-  }
-  .menu-wrap.alt-page-menu .menu-logo div:nth-child(2) span {
-    padding-bottom: 8px;
-  }
-  .menu-wrap.alt-page-menu .menu-logo span {
-    background-color: #ff0090;
-    display: inline-block;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
   }
   .menu-wrap.alt-page-menu .spacer {
-    font-weight: 400;
-    align-self: flex-start;
+    margin-bottom: 0;
     width: 15vw;
   }
 }
