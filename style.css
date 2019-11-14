@@ -1460,6 +1460,7 @@ html.no-scroll, body.no-scroll {
   margin-top: 0;
 }
 #about .about-text-container p {
+  font-weight: 600;
   line-height: 1.3em;
   text-align: justify;
 }
