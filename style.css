@@ -914,6 +914,9 @@ p {
 html.no-scroll, body.no-scroll {
   overflow-y: hidden;
 }
+#envirabox-title-float-wrap {
+  display: none !important;
+}
 @media only screen and (min-width: 787px) {
   html.no-scroll, body.no-scroll {
     overflow-y: auto;
@@ -1936,13 +1939,15 @@ html.no-scroll, body.no-scroll {
   position: fixed;
   right: 0;
   opacity: 0;
+  visibility: hidden;
   top: 50%;
-  transition: opacity 450ms ease;
+  transition: opacity 450ms ease, visibility 450ms ease;
   transform: translateY(-50%);
   z-index: 5;
 }
 #social-menu.open {
   opacity: 1;
+  visibility: visible;
   display: block;
 }
 #social-menu .container {
@@ -1958,6 +1963,7 @@ html.no-scroll, body.no-scroll {
 @media screen and (min-width: 481px) {
   #social-menu {
     opacity: 1;
+    visibility: visible;
     display: block;
   }
 }

@@ -164,6 +164,9 @@ html.no-scroll,
 body.no-scroll {
   overflow-y: hidden;
 }
+#envirabox-title-float-wrap {
+  display: none !important;
+}
 
 @media only screen and (min-width: $screen_med) {
   html.no-scroll,

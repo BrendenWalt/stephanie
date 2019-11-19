@@ -3,12 +3,14 @@
   position: fixed;
   right: 0;
   opacity: 0;
+  visibility: hidden;
   top: 50%;
-  transition: opacity 450ms ease;
+  transition: opacity 450ms ease, visibility 450ms ease;
   transform: translateY(-50%);
   z-index: 5;
   &.open {
     opacity: 1;
+    visibility: visible;
     display: block;
   }
   .container {
@@ -23,6 +25,7 @@
   }
   @media screen and (min-width: $screen_sm) {
     opacity: 1;
+    visibility: visible;
     display: block;
   }
 }
